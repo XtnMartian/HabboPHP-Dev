@@ -1,0 +1,7 @@
+INSTALLATION :
+	Mise à jours :
+		Sauvegarder votre site 
+		Remplacer tout les anciens fichiers par les nouveaux. 
+	Première installation : 
+		Placer le CMS sur votre FTP
+		Rendez-vous via un navigateur ( Chrome, Mozilla ) sur votre site et suivez les étpaes.

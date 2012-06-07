@@ -1,0 +1,181 @@
+/*-----------------------------------------------------------------------------------*/
+/*	3.	Navigation & Menus
+/*-----------------------------------------------------------------------------------*/
+
+nav {
+    float: right;
+	height: 35px;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: 35px;
+}
+
+nav ul a {
+	display: block;
+	position: relative;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .5);	
+
+}
+
+nav ul li {
+	float: left;
+	position: relative;
+	z-index: 1000;
+}
+
+nav ul li:hover { visibility: inherit; /* fixes IE7 'sticky bug' */ }
+
+nav ul ul {
+	position: absolute;
+	top: -9999em;
+	width: 150px; /* left offset of submenus need to match (see below) */
+	padding: 0 0 0 0;
+margin: 12px 0 0 0;
+}
+
+
+
+nav ul ul li { width: 100%; }
+
+/*  Make sub menus appear */
+nav ul li:hover ul,
+nav ul li.sfHover ul {
+	top: 41px; /* match top ul list item height */
+	z-index: 1000;
+	
+	
+}
+
+/* Hide all subs subs (4 levels deep) */
+nav ul li:hover li ul,
+nav ul li.sfHover li ul,
+nav ul li li:hover li ul,
+nav ul li li.sfHover li ul,
+nav ul li li li:hover li ul,
+#primary-nav ul li li li.sfHover li ul { top: -9999em; }
+
+/* Displays all subs subs (4 levels deep) */
+nav ul li li:hover ul,
+nav ul li li.sfHover ul,
+nav ul li li li:hover ul,
+nav ul li li li.sfHover ul,
+nav ul li li li li:hover ul,
+nav ul li li li li.sfHover ul {
+	left: 150px; /* match .nav ul width */
+	top: -1px;
+}
+	
+/* top level skin ------------------------------------*/
+nav ul a {
+	border-bottom: none;
+	color: #fff;
+	height: 35px;
+	line-height: 35px;
+	padding-top: 0;
+	padding-right: 9px;
+	padding-bottom: 0;
+	padding-left: 9px;
+		
+}
+
+nav ul a:hover,
+nav ul li.sfHover > a,
+nav ul li.current-cat > a,
+nav ul li.current_page_item > a,
+nav ul li.current-menu-item > a {
+	color: #eee;
+	
+}
+
+/* 2nd level skin ------------------------------------*/
+nav ul ul {
+	background-color: #fff;
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,.1);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,.1);
+	box-shadow: 0 1px 3px rgba(0,0,0,.1);
+	padding-top: 3px;
+	padding-right: 12px;
+	padding-bottom: 3px;
+	padding-left: 0px;
+	border: 1px solid #dfdfdf;
+}
+
+nav ul ul li {
+	height: 35px;
+	line-height: 35px;
+	float: none;
+	background: none;
+	border-top-width: 1px;
+	border-top-style: dotted;
+	border-top-color: #efefef;
+}
+
+nav ul ul li:first-child { border-top: none; }
+
+nav ul ul li a {
+	color: #666;
+	font-weight: normal;
+	line-height: 35px;
+	height: 35px;
+	font-size: 12px;
+	padding: 0;
+	text-decoration: none;
+	text-transform: none;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0);
+}
+
+nav ul li.sfHover ul a { background: #fff; }
+
+nav ul li.sfHover ul a:hover { color: #555; }
+
+nav ul ul li a:visited {color: #666;}
+
+/* Secondary Nav -------------------------------------*/
+
+nav { 
+    float: right; 
+    width: 50%;
+}
+
+nav ul { float: right; }
+
+nav li {
+    float: left;
+    margin-left: 7px;
+}
+
+nav a {
+	border-bottom: none;
+	color: #222;
+	padding: 2px 3px;
+	margin: 0;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	line-height: 21px;
+}
+
+    
+nav a:visited {color: #fff;}
+
+	
+/* ======================================================= */
+/* Responsive Navigation*/
+/* ======================================================= */
+
+ nav select {
+	display: none;
+	width: 100%;
+	border: 3px solid #242424;
+	position: relative;
+	height: 30px;
+	padding: 3px;
+    }
+    
+    @media (max-width: 960px) {
+      nav ul     { display: none; }
+      nav select { display: inline-block; }
+    }

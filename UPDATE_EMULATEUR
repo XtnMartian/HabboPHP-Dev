@@ -1,0 +1,18 @@
+User :
+	VIP : 
+		- VIP => Rank : OK
+		- Rank => 2 : OK
+	Préférences :
+		- Cacher Room
+		- Afficher mon statut
+	- Colonne user
+	
+Badge : 
+	- Structure database : OK
+
+Amitié : 
+	- Structure database : OK
+	
+Administration :
+	-WordFiltrer
+	-Rank : OK

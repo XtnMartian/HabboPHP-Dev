@@ -1,0 +1,47 @@
+CHANGELOG HABBOPHP
+
+V0.1 :
+	-Publication du CMS
+V0.1.1 :
+	- Modification /templates/events.tpl
+	- Modification friends /home.php
+	- Add  : Apr'e8s register, l'users est automatiquement connect'e9
+	- Modification: Register.php 
+	- Correction :	Facebook
+					Connexion Automatique
+
+	- Modification : admin/boutique.php Correction de la d'e9sactivation des modes de paiements
+	- Modification /templates/shop.tpl 
+	- Modification /shop.php Affichage d'une erreur en cas de mode de paiement vide
+	- Modification : admin/index Nouveau lien vers le forum d'aide
+	- Modification : ajax/password_forgotten.php
+
+	- Add  : Page s'e9curit'e9
+
+V1.2
+	- Modification : Form.php
+	- Modification : Starpass
+	- Modification : Token sécurité
+	- Fixation des accents en ASCII
+	- Fixation d'events.php
+	- Fixation : Maintenance
+	- Fixation : /admin/form/config.php
+	- Suppression d'image inutile dans le dossier /web-gallery/images
+	- Modification : core.php
+	- Add: class.tools.php
+	- Modification : Refonte du header de l'admin
+	- Add : /admin/includes/init.php
+	- Fixation : /form/
+	- Fixation : client.php
+	- Refonte token
+	- Add : init.php
+V1.2.1
+	- Add :  init.php
+	- Fixe : compilation
+	- Fixe : checkVIP
+V1.2.2
+	- Fixe : Redirection après submit formulaire
+	- Add :  Fonction ValideInput();
+	- Fixe : Help/category.php
+	- Add : $db->query sur toutes les requête
+	- Add : Class.users : addBadges($badge)
