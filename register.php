@@ -107,7 +107,6 @@ if($page == 2){
 
 if($page == 3){
 
-	print_r($_SESSION);
 
 	$config->checkMaintenance();
 //	if(!isset($_SESSION['uid']) && empty($_SESSION['uid'])) redirection($config->url_site);
@@ -330,9 +329,6 @@ if(!isset($user_profile)) redirection($config->url_site.'/index.php?error=2');
 		} //L'utilisateur a déjà un compte facebook
 		else{
 	
-	
-		
-		
 		
 			$fid = $user_profile['id'];
 		

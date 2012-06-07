@@ -28,12 +28,12 @@
             
             <div style="padding:10px;font-size:18px;background:#c40000;color:white;text-shadow:0 1px 0 #990000;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;margin:10px;display:none;opacity:0;" class="not_enought_money">{#YouHaveNoEnough#} {$config->moneyname}</div>
                 
-            {foreach from=$badges key=k item=v}
-				<a href="javascript:void(0);" style="text-decoration:none;" onclick="addBadgeVerif('{$v.idbadge}',{$v.amount})">
-				<div style="width:60px;padding:10px 7px;" class="ssh">
-					<center><img src="http://images.habbo.com/c_images/album1584/{$v.idbadge}.gif" ></img>
+            {foreach from=$Rares key=k item=v}
+				<a href="javascript:void(0);" style="text-decoration:none;" onclick="addBadgeVerif('{$v.oid}',{$v.prix})">
+				<div style="width:auto;padding:10px 7px;" class="ssh">
+					<center><img src="{$v.image}" ></img>
 					<br>
-					<span style="font-size:15px;color:#000;">{$v.amount}<br /><span style="font-size:10px;">{$config->moneyname}</span></span></a></center>
+					<span style="font-size:15px;color:#000;">{$v.prix}<br /><span style="font-size:10px;">{$config->moneyname}</span></span></a></center>
 				</div>
 			{/foreach}
 		</div>
@@ -43,17 +43,17 @@
 </div>
 {literal}
 <script type="text/javascript">
-function addBadgeVerif(badge,price){
+function addBadgeVerif(rare,price){
 	jQuery('#verif').slideDown().animate({opacity:1});
-	jQuery('#vbi').html(badge);
+	jQuery('#vbi').html(rare);
 	jQuery('#pricee').html(price);
-	jQuery('#confirmbb').attr('onclick',"addBadge('"+badge+"')");
+	jQuery('#confirmbb').attr('onclick',"addRares('"+rare+"')");
 }
-function addBadge(badge){
+function addRares(rare){
 	var token = jQuery('#token').val();
-	if(badge == ""){return false}
-	jQuery.post('ajax/addBadge.php', { badge:badge,token:token },function(data){
-		if(data == "11"){
+	if(rare == ""){return false}
+	jQuery.post('ajax/addRare.php', { rare:rare,token:token },function(data){
+		if(data == "12"){
 			jQuery('#valideok').slideDown('fast',function(){ jQuery('#valideok').animate({opacity:1}); });
 			setTimeout("jQuery('#valideok').animate({opacity:0}).slideUp('fast');",2000);
 		}

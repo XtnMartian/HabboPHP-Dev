@@ -5,8 +5,8 @@
   <p class="lead"><?php echo $lang['HelpInfos']; ?></p>
   <div class="subnav">
     <ul class="nav nav-pills">
-      <?php if($user->rank>=7){ ?><li><a href="#category"><?php echo $lang['Categories']; ?></a></li><?php } ?>
-      <?php if($user->rank>=7){ ?><li><a href="#articlesadd"><?php echo $lang['Topics']; ?></a></li><?php } ?>
+       <?php if(Tools::checkACL($user->rank,ACL_SUPPORT_CATEGORIES)) {  ?><li><a href="#category"><?php echo $lang['Categories']; ?></a></li><?php } ?>
+      <?php if(Tools::checkACL($user->rank,ACL_SUPPORT_ARTICLES)) {  ?><li><a href="#articlesadd"><?php echo $lang['Topics']; ?></a></li><?php } ?>
     </ul>
   </div>
 </header>
@@ -19,7 +19,7 @@ while($row=mysql_fetch_array($query)) {
 }
 ?>
 
-<?php if($user->rank>=7){ ?>
+<?php  if(Tools::checkACL($user->rank,ACL_SUPPORT_CATEGORIES)) {  ?>
 <section id="category">
   <div class="page-header">
     <h1><?php echo $lang['Categories']; ?></h1>
@@ -64,7 +64,7 @@ while($row=mysql_fetch_array($query)) {
 </section>
 <?php } ?>
 
-<?php if($user->rank>=7){ ?>
+<?php  if(Tools::checkACL($user->rank,ACL_SUPPORT_ARTICLES)) {  ?>
 <section id="articlesadd">
   <div class="page-header">
     <h1><?php echo $lang['Topics']; ?></h1>

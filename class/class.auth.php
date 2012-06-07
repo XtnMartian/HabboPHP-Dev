@@ -28,7 +28,7 @@ class Auth{
 			$data = $this->_db->query("SELECT * FROM bans WHERE value = '".$username."' OR value ='".$_SERVER['REMOTE_ADDR']."' LIMIT 1",true,false);	
 			if($data){
 				if(time() > $data['expire']){
-					$req = $this->_db->query('DELETE FROM bans WHERE id="'.safe($data['id'],'SQL'));	
+					$req = $this->_db->query('DELETE FROM bans WHERE id='.safe($data['id'],'SQL'));	
 					return false ;
 				}
 				else{
@@ -167,17 +167,14 @@ class Auth{
 	public function isConnected(){
 		if(isset($_SESSION['Auth']) && $_SESSION['Auth'] == true && isset($_COOKIE['Auth']) && $_SESSION['Timeout'])
 		{
-			if(time() < $_SESSION['Timeout'])
+			$sql = mysql_query('SELECT id FROM users WHERE id='.safe($this->uid,'SQL'));
+			if(mysql_num_rows($sql) == 1)
 			{
-				$sql = mysql_query('SELECT id FROM users WHERE id='.safe($this->uid,'SQL'));
-				if(mysql_num_rows($sql) == 1)
+				if($_COOKIE['Auth'] == $this->getSaltUsers($this->uid))
 				{
-					if($_COOKIE['Auth'] == $this->getSaltUsers($this->uid))
-					{
-						$this->setLast_online($this->uid);
-						$this->setIP_last($this->uid);
-						return true ;
-					}
+					$this->setLast_online($this->uid);
+					$this->setIP_last($this->uid);
+					return true ;
 				}
 			}
 		}

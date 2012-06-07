@@ -59,6 +59,16 @@ class Users{
 	}
 	
 	
+	public function addRare($id){
+		if(is_numeric($id)){
+	
+			$lastID = $this->_db->query('SELECT id FROM items ORDER BY id DESC LIMIT 1',true,false);
+			$lastID = $lastID['id'] + 1 ;
+			if($this->_db->query("INSERT INTO items (id,user_id,base_item,extra_data) VALUES ('".$lastID."','".$this->id."','".$id."','0')"))
+				return true ;
+		}
+	}
+	
 	
 	public function refreshData(){
 		$req = $this->_db->query('SELECT '.$this->colonne[EMULATOR].' FROM users WHERE id='.safe($this->id,'SQL'));

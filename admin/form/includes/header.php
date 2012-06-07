@@ -6,20 +6,19 @@
 #|         Copyright © 2012 Valentin & Robin. All rights reserved.        #|
 #|																		  #|
 #|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|
-@session_start();
-@ini_set('display_errors', 0); 
-@ini_set('log_errors', 0); 
-@error_reporting(0);
-$admin=true;
-define('CORE','CORE');
-include "../../includes/core.php";
-include "../lang/fr.php";
+
+define('RANK',6);
+require '../includes/init.php' ;
+
 ini_set('display_errors', 0); 
+ini_set('log_errors', 0); 
+error_reporting(0);
+
+if(!Tools::checkACL($user->rank,ACL_FORM_MANAGE)) redirection('../index.php?error=acl');
+
 $currentFile = $_SERVER["PHP_SELF"];
 $parts = Explode('/', $currentFile);
 $pagename=$parts[count($parts) - 1];
-if(!$Auth->isConnected()) redirection($config->url_site.'/logout.php');
-if($user->rank<6) redirection($config->url_site.'/logout.php');
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

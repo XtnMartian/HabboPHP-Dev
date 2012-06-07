@@ -6,6 +6,7 @@
 
 <div class="row-fluid">
   <div class="span4">
+  <?php if(Tools::checkACL($user->rank,ACL_INDEX_STATS)) : ?>
   <h2>Statistiques</h2>
   <div class="btn-group">
   	<a class="btn" data-toggle="modal" href="#visitors"><?php echo $lang['Visites']; ?></a>
@@ -14,15 +15,18 @@
   	<a class="btn btn-primary" data-toggle="modal" href="#registers"><?php echo $lang['Registers']; ?></a>
   </div>
   <br />
+ <?php endif ; ?>
   <h2><?php echo $lang['HelpHabboPHP']; ?></h2>
   <iframe src="http://release.habbophp.com/dons/dons.php?lang=<?php echo $config->langadmin; ?>" width="100%" border="0" scrolling="no" style="border:0;height:280px;width:100%;"></iframe>
   </div>
   <div class="span8">
+    <?php if(Tools::checkACL($user->rank,ACL_INDEX_NOTES)) : ?>
   <h2><?php echo $lang['Notes']; ?></h2>
   	<textarea style="width:100%" id="notes" ><?php echo $config->notes ; ?></textarea><br/>
   	<button type="button" onclick="setconfig($('.nicEdit-main').html(),'notes');" class="btn btn-primary"><?php echo $lang['Save']; ?></button>
-  
+  <?php endif ;?>
   <br /><br />
+ 
   <h2><?php echo $lang['NewsFromHabboPHP']; ?></h2>
   <ul class="nav nav-pills">
   	<li class="active"><a href="#home" data-toggle="tab">Twitter HabboPHP</a></li>
@@ -32,7 +36,6 @@
 	<div style="margin-left:20px;" class="tab-content">
 	  <div class="tab-pane active well" id="home"><div id="lasttweet"><?php echo $lang['Loading']; ?>…</div><div style="float:right;"><a href="" style="font-family:georgia;font-style:italic;"><?php echo $lang['FollowHabboPHPonTwitter']; ?></a></div><div style="clear:both;"></div></div>
 	</div>
-
   </div>
    </div>
 

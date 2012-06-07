@@ -5,13 +5,13 @@
   <p class="lead"><?php echo $lang['WebsiteTitleInformations']; ?></p>
   <div class="subnav">
     <ul class="nav nav-pills">
-      <?php if($user->rank>=7){ ?><li><a href="#postnews"><?php echo $lang['PostNews']; ?></a></li><?php } ?>
-      <?php if($user->rank>=7){ ?><li><a href="#gnews"><?php echo $lang['ManageNews']; ?></a></li><?php } ?>
-      <?php if($user->rank>=7){ ?><li><a href="#ads"><?php echo $lang['Ads']; ?></a></li><?php } ?>
-      <?php if($user->rank>=7){ ?><li><a href="#configs"><?php echo $lang['BaseConfiguration']; ?></a></li><?php } ?>
-      <?php if($user->rank>=7){ ?><li><a href="#mail"><?php echo $lang['MailConfig']; ?></a></li><?php } ?>
-      <?php if($user->rank>=7){ ?><li><a href="#social"><?php echo $lang['SocialNetwork']; ?></a></li><?php } ?>
-      <?php if($user->rank>=7){ ?><li><a href="#facebookconnect"><?php echo $lang['FacebookConnect']; ?></a></li><?php } ?>
+      <?php if(Tools::checkACL($user->rank,ACL_SITE_NEWS)) { ?><li><a href="#postnews"><?php echo $lang['PostNews']; ?></a></li><?php } ?>
+      <?php if(Tools::checkACL($user->rank,ACL_SITE_NEWS)) { ?><li><a href="#gnews"><?php echo $lang['ManageNews']; ?></a></li><?php } ?>
+       <?php if(Tools::checkACL($user->rank,ACL_SITE_ADS)) { ?><li><a href="#ads"><?php echo $lang['Ads']; ?></a></li><?php } ?>
+       <?php if(Tools::checkACL($user->rank,ACL_SITE_CONFIG)) { ?><li><a href="#configs"><?php echo $lang['BaseConfiguration']; ?></a></li><?php } ?>
+       <?php if(Tools::checkACL($user->rank,ACL_SITE_CONFIG_MAIL)) { ?><li><a href="#mail"><?php echo $lang['MailConfig']; ?></a></li><?php } ?>
+       <?php if(Tools::checkACL($user->rank,ACL_SITE_SOCIAL)) { ?><li><a href="#social"><?php echo $lang['SocialNetwork']; ?></a></li><?php } ?>
+       <?php if(Tools::checkACL($user->rank,ACL_SITE_FB)) { ?><li><a href="#facebookconnect"><?php echo $lang['FacebookConnect']; ?></a></li><?php } ?>
     </ul>
   </div>
 </header>
@@ -24,7 +24,7 @@
   </div>
 </div>
 
-<?php if($user->rank>=7){ ?><section id="postnews">
+<?php  if(Tools::checkACL($user->rank,ACL_SITE_NEWS_POST)) { ?><section id="postnews">
   <div class="page-header">
     <h1><?php echo $lang['PostNews']; ?> <small><?php echo $lang['PostNewsSubTitle']; ?></small></h1>
   </div>
@@ -118,7 +118,7 @@
 
 <!-- Code
 ================================================== -->
-<?php if($user->rank>=7){ ?><section id="gnews">
+<?php if(Tools::checkACL($user->rank,ACL_SITE_NEWS_VIEW)) { ?><section id="gnews">
   <div class="page-header">
     <h1><?php echo $lang['ManageNews']; ?></h1>
   </div>
@@ -202,7 +202,7 @@
 
 
 
-<?php if($user->rank>=7){ ?>
+<?php if(Tools::checkACL($user->rank,ACL_SITE_ADS)) { ?>
 <section id="ads">
   <div class="page-header">
     <h1><?php echo $lang['Ads']; ?> <small><?php echo $lang['LetInputEmptyToDesactivate']; ?></small></h1>
@@ -268,7 +268,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js"&gt;
 <?php } ?>
 
 
-<?php if($user->rank>=7){ ?>
+<?php if(Tools::checkACL($user->rank,ACL_SITE_CONFIG)) { ?>
 <section id="configs">
 	<div class="page-header">
 		<h1><?php echo $lang['BaseConfiguration']; ?></h1>
@@ -470,7 +470,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js"&gt;
 </section>
 
 <?php } ?>
-
+<?php if(Tools::checkACL($user->rank,ACL_SITE_CONFIG_MAIL)) { ?>
 <section id="mail">
 	<div class="page-header">
 		<h1><?php echo $lang['ConfigMail']; ?> Gmail</h1>
@@ -505,8 +505,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js"&gt;
     
   </div>
 </section>
-
-<?php if($user->rank>=7){ ?>
+<?php } ?>
+<?php if(Tools::checkACL($user->rank,ACL_SITE_SOCIAL)){ ?>
 <section id="social">
   <div class="page-header">
     <h1><?php echo $lang['SocialNetwork']; ?></h1>
@@ -547,7 +547,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js"&gt;
 
 
 
-<?php if($user->rank>=7){ ?>
+<?php if(Tools::checkACL($user->rank,ACL_SITE_FB)) {  ?>
 <section id="facebookconnect">
   <div class="page-header">
     <h1><?php echo $lang['FacebookConnect']; ?> <small><a href="http://habbophp.com/wiki/doku.php?id=wiki:facebookconnect" target="_blank"><?php echo $lang['HowToConfigFacebookConnect'];  ?></a></small></h1>

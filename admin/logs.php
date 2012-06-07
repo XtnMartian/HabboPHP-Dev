@@ -1,5 +1,5 @@
 <?php include "includes/header.php"; ?>
-<?php if($user->rank>=7){ ?>
+<?php if(Tools::checkACL($user->rank,ACL_LOGS_VIEW)) {  ?>
 <header class="jumbotron subhead" id="overview">
   <h1>Admin logs</h1>
 </header>

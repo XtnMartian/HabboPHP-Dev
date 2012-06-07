@@ -313,4 +313,9 @@ $lang=array(
 	"Notes" => "Notes",
 	"NewsFromHabboPHP" => "Actualités",
 	"FollowHabboPHPonTwitter" => "Suivez HabboPHP sur Twitter",
+	"ManageRares" => "Gestion des rares",
+	"AddRare" => "Ajouter un rare",
+	"NeedIDRare" => "Un ID rare est obligatoire",
+	"ManageRareShop" => "Gestion des Rares",
+	"IDRare" => "ID Rare"
  );

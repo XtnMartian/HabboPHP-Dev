@@ -5,13 +5,13 @@
   <p class="lead"><?php echo $lang['FindUsersToManage']; ?></p>
   <div class="subnav">
     <ul class="nav nav-pills">
-      <?php if($user->rank>=6){ ?><li><a href="users.php"><?php echo $lang['Users']; ?></a></li><?php } ?>
-      <?php if($user->rank>=6){ ?><li><a href="ban.php"><?php echo $lang['ManageBan']; ?></a></li><?php } ?>
+      <?php if(Tools::checkACL($user->rank,ACL_USERS_VIEW)) { ?><li><a href="users.php"><?php echo $lang['Users']; ?></a></li><?php } ?>
+      <?php if(Tools::checkACL($user->rank,ACL_USERS_BAN)) {  ?><li><a href="ban.php"><?php echo $lang['ManageBan']; ?></a></li><?php } ?>
     </ul>
   </div>
 </header>
 
-
+<?php if(Tools::checkACL($user->rank,ACL_USERS_VIEW)) { ?>
 <section id="server">
 
       <div class="form-horizontal">
@@ -29,6 +29,6 @@
 	  <div id="resultsSearch"></div>
 
 </section>
-
+<?php } ?>
 
 <?php include "includes/footer.php"; ?>

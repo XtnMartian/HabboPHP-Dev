@@ -5,14 +5,14 @@
   <p class="lead"><?php echo $lang['ServerInfos']; ?></p>
   <div class="subnav">
     <ul class="nav nav-pills">
-      <?php if($user->rank>=7){ ?><li><a href="#server"><?php echo $lang['ServerConfig']; ?></a></li><?php } ?>
-      <?php if($user->rank>=6){ ?><li><a href="#bannedwords"><?php echo $lang['BannedWords']; ?></a></li><?php } ?>
-      <?php if($user->rank>=7){ ?><li><a href="#off"><?php echo $lang['Maintenance']; ?></a></li><?php } ?>
+      <?php if(Tools::checkACL($user->rank,ACL_SERVER_CONFIG)) { ?><li><a href="#server"><?php echo $lang['ServerConfig']; ?></a></li><?php } ?>
+      <?php if(Tools::checkACL($user->rank,ACL_SERVER_WORDS)) { ?><li><a href="#bannedwords"><?php echo $lang['BannedWords']; ?></a></li><?php } ?>
+      <?php if(Tools::checkACL($user->rank,ACL_SERVER_MAINTENACE)) { ?><li><a href="#off"><?php echo $lang['Maintenance']; ?></a></li><?php } ?>
     </ul>
   </div>
 </header>
 
-<?php if($user->rank>=7){ ?>
+<?php  if(Tools::checkACL($user->rank,ACL_SERVER_CONFIG)) { ?>
 <section id="server">
   <div class="page-header">
     <h1><?php echo $lang['ServerConfig']; ?></h1>
@@ -65,7 +65,7 @@
 <?php } ?>
 
 
-<?php if($user->rank>=6 && EMULATOR == 'phoenix'){ ?>
+<?php  if(Tools::checkACL($user->rank,ACL_SERVER_WORDS) && EMULATOR == 'phoenix') { ?>
 <section id="bannedwords">
   <div class="page-header">
     <h1><?php echo $lang['BannedWords']; ?></h1>
@@ -142,7 +142,7 @@
 </section>
 <?php } ?>
 
-<?php if($user->rank>=6 && EMULATOR  == 'butterfly'){ ?>
+<?php if(Tools::checkACL($user->rank,ACL_SERVER_WORDS) && EMULATOR == 'butterfly') {?>
 <section id="bannedwords">
   <div class="page-header">
     <h1><?php echo $lang['BannedWords']; ?></h1>
@@ -212,7 +212,7 @@
 <?php } ?>
 
 
-<?php if($user->rank>=7){ ?>
+<?php if(Tools::checkACL($user->rank,ACL_SERVER_MAINTENACE)){  ?>
 <section id="off">
   <div class="page-header">
     <h1><?php echo $lang['Maintenance']; ?> <small><?php echo $lang['MaintenanceInfo']; ?></small></h1>

@@ -5,8 +5,8 @@
   <p class="lead"><?php echo $lang['PageInfo']; ?></p>
   <div class="subnav">
     <ul class="nav nav-pills">
-      <?php if($user->rank>=7){ ?><li><a href="#addpage"><?php echo $lang['AddPage']; ?></a></li><?php } ?>
-      <?php if($user->rank>=7){ ?><li><a href="#listpage"><?php echo $lang['ListPage']; ?></a></li><?php } ?>
+      <?php if(Tools::checkACL($user->rank,ACL_PAGES_ADD)) {  ?><li><a href="#addpage"><?php echo $lang['AddPage']; ?></a></li><?php } ?>
+      <?php if(Tools::checkACL($user->rank,ACL_PAGES_VIEW)) {  ?><li><a href="#listpage"><?php echo $lang['ListPage']; ?></a></li><?php } ?>
     </ul>
   </div>
 </header>
@@ -18,6 +18,7 @@
     <p><?php echo $lang['LoadingPageInfo']; ?></p>
   </div>
 </div>
+<?php if(Tools::checkACL($user->rank,ACL_PAGES_ADD)) { ?>
 <?php
 if(isset($_GET['id']) && is_numeric($_GET['id']))
 $dataPage = mysql_fetch_assoc(mysql_query('select * from habbophp_pages WHERE id="'.safe($_GET['id'],'SQL').'"'));
@@ -53,6 +54,8 @@ $dataPage = mysql_fetch_assoc(mysql_query('select * from habbophp_pages WHERE id
       </div>
 
 </section>
+<?php } ?>
+<?php if(Tools::checkACL($user->rank,ACL_PAGES_VIEW)) {  ?>
 <section id="listpage">
 <?php
 $req = mysql_query('select * from habbophp_pages');
@@ -83,4 +86,5 @@ $req = mysql_query('select * from habbophp_pages');
   </tbody>
 </table>
 </section>
+<?php } ?>
 <?php include "includes/footer.php"; ?>

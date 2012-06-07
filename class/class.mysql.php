@@ -53,7 +53,7 @@ class Mysql{
 	  			$connection = mysql_connect($this->_server, $this->_user, $this->_password);	  			
 	  			if ($connection === false)
 	  			{
-	    			throw new Exception('Cannot connect to mysql ( ERROR 01 ) Impossible de se connect&aecute; à la base de donn&eacute;e');
+	    			throw new Exception('Cannot connect to mysql ( ERROR 01 ) Impossible de se connect&eacute; à la base de donn&eacute;e');
 	  			}
 		}
 		catch (Exception $e)
@@ -67,7 +67,7 @@ class Mysql{
 	  		$database = mysql_select_db($this->_database);
 	 
 	 		if ($database === false){
-	    		throw new Exception('Cannot connect to database : '.$this->_database.' ( ERROR 02 ) La base de donn&aecute;e choisie n\'&eacute;xiste pas');
+	    		throw new Exception('Cannot connect to database : '.$this->_database.' ( ERROR 02 ) La base de donn&eacute;e choisie n\'&eacute;xiste pas');
 	  		}
 	  	}
 		catch (Exception $e)

@@ -67,6 +67,32 @@ $(document).ready(function(){
 	
 });
 
+
+function addRareManage(){
+	var oid = 	$('#oidRare').val();
+	var name = 	$('#nameRare').val();
+	var prix = 	$('#prixRare').val();
+	var image = $('#imageRare').val();
+	var token = $('#token').val();
+	
+	if(oid == ''){  alert('<?php echo $lang['NeedIDRare']; ?>'); return false; }
+	
+	$.post('ajax/addRareManage.php',{oid:oid,name:name,prix:prix,image:image,token:token}, function(data){
+		if(data == 1){
+			document.location.reload() ;
+		}
+		else{
+			alert('Error');
+		}
+	});
+}
+
+function deleteRareManager(id){
+	$.post('ajax/deleteRareManager.php',{id:id},function(data){
+		$('#r'+id).fadeOut();
+	});
+}
+
 function ChangeUsers(id){
 	var token = $('#token').val();
 	var username = $('#inusername_'+id).val();

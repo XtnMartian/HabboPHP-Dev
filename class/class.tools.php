@@ -27,6 +27,7 @@ class Tools{
 		$acl_liste = explode(";",$acl);
 		if(in_array($ranks,$acl_liste))
 			return true ;
+		return false ;
 	}
 	
 	static function getServerName()

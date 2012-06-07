@@ -1,5 +1,4 @@
 <?php
-define('RANK','6');
 require_once('../includes/init.php');
 
 if(isset($_POST['title'])){

@@ -14,15 +14,10 @@ $tpl->assign('jetons',$user->getJetons());
 $tpl->assign('groups','shop');
 $tpl->assign('token',Tools::generate_token());
 
-if(empty($config->paypalemail)) $tpl->assign('paypalD','style="display:none;"');
-else $tpl->assign('paypalD','');
+$raresData = $db->query('SELECT * FROM habbophp_shop_rares',true);
 
-if(empty($config->allopassauth)) $tpl->assign('allopassD','style="display:none;"');
-else $tpl->assign('allopassD','');
-
-if(empty($config->starpassacc)) $tpl->assign('starpassD','style="display:none;"');
-else $tpl->assign('starpassD','');
+$tpl->assign('Rares',$raresData);
 
 $tpl->display('header.tpl');
-$tpl->display('shop-rare.tpl');
+$tpl->display('rares.tpl');
 $tpl->display('footer.tpl');

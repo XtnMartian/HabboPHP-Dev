@@ -5,17 +5,19 @@
   <p class="lead"><?php echo $lang['ServerInfos']; ?></p>
   <div class="subnav">
     <ul class="nav nav-pills">
-      <?php if($user->rank>=7){ ?><li><a href="#stats"><?php echo $lang['Statistics']; ?></a></li><?php } ?>
-      <?php if($user->rank>=6){ ?><li><a href="#voucher"><?php echo $lang['AddVoucher']; ?></a></li><?php } ?>
-      <?php if($user->rank>=7){ ?><li><a href="#money"><?php echo $lang['ConfigMoney']; ?></a></li><?php } ?>
-      <?php if($user->rank>=7){ ?><li><a href="#badge"><?php echo $lang['ManageBadgesShop']; ?></a></li><?php } ?>
-      <?php if($user->rank>=7){ ?><li><a href="#paiement"><?php echo $lang['PaiementMethods']; ?></a></li><?php } ?>
-      <?php if($user->rank>=7){ ?><li><a href="#logs"><?php echo $lang['PaymentsLogs']; ?></a></li><?php } ?>
+      <?php if(Tools::checkACL($user->rank,ACL_SHOP_STATS)) { ?><li><a href="#stats"><?php echo $lang['Statistics']; ?></a></li><?php } ?>
+      <?php if(Tools::checkACL($user->rank,ACL_SHOP_VOUCHER)) { ?><li><a href="#voucher"><?php echo $lang['AddVoucher']; ?></a></li><?php } ?>
+      <?php if(Tools::checkACL($user->rank,ACL_SHOP_CONFIG_MONEY)) {  ?><li><a href="#money"><?php echo $lang['ConfigMoney']; ?></a></li><?php } ?>
+        <?php if(Tools::checkACL($user->rank,ACL_SHOP_RARES)) {  ?><li><a href="#rare"><?php echo $lang['ManageRareShop']; ?></a></li><?php } ?>
+      <?php if(Tools::checkACL($user->rank,ACL_SHOP_BADGES)) {  ?><li><a href="#badge"><?php echo $lang['ManageBadgesShop']; ?></a></li><?php } ?>
+         
+      <?php if(Tools::checkACL($user->rank,ACL_SHOP_PAIEMENT)) { ?><li><a href="#paiement"><?php echo $lang['PaiementMethods']; ?></a></li><?php } ?>
+      <?php if(Tools::checkACL($user->rank,ACL_SHOP_PAIEMENT_LOGS)) {  ?><li><a href="#logs"><?php echo $lang['PaymentsLogs']; ?></a></li><?php } ?>
     </ul>
   </div>
 </header>
 
-<?php if($user->rank>=7){ ?>
+<?php if(Tools::checkACL($user->rank,ACL_SHOP_STATS)) { ?>
 <section id="stats">
   <div class="page-header">
     <h1><?php echo $lang['Statistics']; ?> <small><?php echo $lang['ChartShopInfos']; ?></small></h1>
@@ -51,7 +53,7 @@ $admin=true;
 </section>
 <?php } ?>
 
-<?php if($user->rank>=6){ ?>
+<?php if(Tools::checkACL($user->rank,ACL_SHOP_VOUCHER)) { ?>
 <section id="voucher">
   <div class="page-header">
     <h1><?php echo $lang['AddVoucher']; ?> <small><?php echo $lang['AboutVoucherCode']; ?></small></h1>
@@ -77,7 +79,7 @@ $admin=true;
 </section>
 <?php } ?>
 
-<?php if($user->rank>=7){ ?>
+<?php if(Tools::checkACL($user->rank,ACL_SHOP_CONFIG_MONEY)) { ?>
 <section id="money">
   <div class="page-header">
     <h1><?php echo $lang['ConfigMoney']; ?></h1>
@@ -111,68 +113,81 @@ $admin=true;
 </section>
 <?php } ?>
 
-<?php if($user->rank>=7){ ?><section id="postnews">
-  <div class="page-header">
-    <h1><?php echo $lang['PostNews']; ?> <small><?php echo $lang['PostNewsSubTitle']; ?></small></h1>
-  </div>
-	
-	
-		
+<?php if(Tools::checkACL($user->rank,ACL_SHOP_RARES)) { ?>
+<section id="rare">
 
+<style>
+.label-normal{
+	width: 150px;
+	float: left;
+}
+</style>
 
-      <div class="form-horizontal">
-      	<input type="hidden" name="linkimagenews" id="linkimagenews" />
-        <fieldset>
-          
-          <div class="control-group">
-            <label class="control-label" for="input01">Nom du Rare</label>
-            <div class="controls">
-              <input type="text" class="input-xlarge" id="titlenews">
-            </div>
-          </div>
-          
-          <div class="control-group">
-            <label class="control-label" for="input01">ID du Rare</label>
-            <div class="controls">
-              <input type="text"  class="input-xlarge" id="shortdescnews">
-              <p class="help-block"><?php echo $lang['ShortDescInfo']; ?></p>
-            </div>
-          </div>
-            <div class="control-group">
-            <label class="control-label" for="input01">Prix</label>
-            <div class="controls">
-              <input type="text"  class="input-xlarge" id="shortdescnews">
-              <p class="help-block"><?php echo $lang['ShortDescInfo']; ?></p>
-            </div>
-          </div>
-           <div class="control-group">
-            <label class="control-label" for="input01">&nbsp;</label>
-            <div class="controls">
-          <form id="imageform" method="post" enctype="multipart/form-data" action='ajax/ajaximage.php'>
-			
-			
-				<span class="btn btn-primary fileinput-button">
-               
-                    <span><?php echo $lang['ChooseImage']; ?></span>
-                    <input type="file" name="photoimg" id="photoimg" />
-                </span> 
-                
-			</form>
-           </div>
-          </div>
-         
-          
-         
-          
-          <div class="form-actions">
-            <button type="button" onclick="postnews($('#linkimagenews').val(),$('#titlenews').val(),$('#shortdescnews').val(),$('.nicEdit-main').html(),$('#comments').val());" class="btn btn-primary"><?php echo $lang['SendMyNews']; ?></button>
-          </div>
-        </fieldset>
+ <div class="modal hide fade badges"  id="raresadd">
+		  <div class="modal-header">
+		    <a class="close" data-dismiss="modal">×</a>
+		    <h3><?php echo $lang['ManageRares']; ?></h3>
+		  </div>
+		  <div class="modal-body">
+		  <div class="form-actions">
+		  	 <label class="label-normal">Base Item : </label><input type="text" id="oidRare"  /><br/>
+		  	 <label class="label-normal">Nom : </label><input type="text" id="nameRare"  /><br />
+		  	 <label class="label-normal">Prix : </label><input type="text" id="prixRare"  /><br />
+		  	 <label class="label-normal">Image ( URL ): </label><input type="text" id="imageRare"/><br />
+        <button type="submit" onclick="addRareManage();" class="btn btn-primary"><?php echo $lang['Add']; ?></button>
       </div>
+		    
+	
+		  </div>
+		<div class="modal-footer">
+		    <a data-dismiss="modal" class="btn">Close</a>
+		  </div>
+	</div>
+
+  <div class="page-header">
+    <h1><?php echo $lang['ManageRares']; ?></h1>
+  </div>
+  
+  
+	
+			
+
+<div class="row">
+  	<div class="span12">
+  		<button type="button" data-toggle="modal" href="#raresadd" class="btn btn-success big btn-big"><?php echo $lang['AddRare']; ?></button><br/><br/>
+  		 <table  class="table table-bordered table-striped">
+  <thead>
+    <tr style="background:white;">
+      <th><?php echo $lang['IDRare']; ?></th>
+      <th><?php echo $lang['Amount']; ?></th>
+ 
+      <th style="text-align:center;"><?php echo $lang['Action']; ?></th>
+    </tr>
+  </thead>
+  <tbody id="newbadge">
+  <?php
+   $dataRare = $db->query('SELECT * FROM habbophp_shop_rares  ORDER BY id',true);
+   foreach($dataRare as $data){
+  ?>
+    <tr id="r<?php echo $data['id']; ?>">
+      <td><?php echo $data['oid'] ;?></td>
+      <td><?php echo $data['prix'] ;?> <?php echo $config->moneyname ; ?></td>
+  
+      <td style="text-align:center;"><button type="button" onclick="deleteRareManager(<?php echo $data['id']; ?>)" class="btn btn-danger big btn-big"><?php echo $lang['Delete']; ?></button></td>
+    </tr>
+    
+   
+    <?php } ?>
+  </tbody>
+</table>
+  	</div>
+  </div>
+
+      
 
 </section><?php } ?>
 
-<?php if($user->rank>=7){ ?>
+<?php if(Tools::checkACL($user->rank,ACL_SHOP_BADGES)) { ?>
 <section id="badge">
   <div class="page-header">
     <h1><?php echo $lang['ManageBadgesShop']; ?></h1>
@@ -232,7 +247,7 @@ $admin=true;
 
 <?php } ?>
 
-<?php if($user->rank>=7){ ?>
+<?php if(Tools::checkACL($user->rank,ACL_SHOP_PAIEMENT)) { ?>
 <section id="paiement">
   <div class="page-header">
     <h1><?php echo $lang['ConfigPayments']; ?> <small><a href="http://habbophp.com/wiki/doku.php?id=wiki:moyensdepaiements" target="_blank"><?php echo $lang['HowToConfigShop'];  ?></a></small></h1>
@@ -351,7 +366,7 @@ $admin=true;
 </section>
 <?php } ?>
 
-<?php if($user->rank>=7){ ?>
+<?php if(Tools::checkACL($user->rank,ACL_SHOP_PAIEMENT_LOGS)) { ?>
 <section id="logs">
   <div class="page-header">
     <h1><?php echo $lang['PaymentsLogs']; ?></h1>

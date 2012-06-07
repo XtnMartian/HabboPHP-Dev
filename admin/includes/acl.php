@@ -9,35 +9,71 @@
 
 /*
 @info : Sur se fichier vous pouvez dŽfinir le rank MINIMUM a avoir pour pouvoir voir ou faire une action sur l'administration
-@tuto : Pour ajouter un autorisation ˆ un rank, sŽparez le deuxime paramtre par un ";" ex : define('ACL_MENU_SERVER','6,5,4');
+@tuto : Pour ajouter un autorisation ˆ un rank, sŽparez le deuxime paramtre par un ";" ex : define('ACL_MENU_SERVER','7,5,4');
+@warning : Ne pas mettre deux fois le mme chiffre : 7;7
 */
 
+//Global
+define('ACL_GLOBAL_ADMIN','7'); //Les ranks qui ont le droit d'accŽder ˆ l'administration
+
+//Index
+define('ACL_INDEX_STATS','7');
+define('ACL_INDEX_NOTES','7');
+
+
 //Menu
-define('ACL_MENU_SERVER','6,7,8');
-define('ACL_MENU_SITE','6');
-define('ACL_MENU_USERS','6');
-define('ACL_MENU_SHOP','6');
-define('ACL_MENU_HELP','6');
-define('ACL_MENU_LOGS','6');
-define('ACL_MENU_PAGE','6');
-define('ACL_MENU_FORM','6');
+define('ACL_MENU_SERVER','7');
+define('ACL_MENU_SITE','7');
+define('ACL_MENU_USERS','7');
+define('ACL_MENU_SHOP','7');
+define('ACL_MENU_HELP','7');
+define('ACL_MENU_LOGS','7');
+define('ACL_MENU_PAGE','7');
+define('ACL_MENU_FORM','7');
 
 
 //Serveur
-define('ACL_SERVER_CONFIG','6');
-define('ACL_SERVER_WORDS','6');
-define('ACL_SERVER_MAINTENACE','6');
+define('ACL_SERVER_CONFIG','7');
+define('ACL_SERVER_WORDS','7');
+define('ACL_SERVER_MAINTENACE','7');
 
 //Site
-define('ACL_SITE_NEWS_POST','6');
-define('ACL_SITE_NEWS_VIEW','6');
-define('ACL_SITE_NEWS_DELETE','6');
-define('ACL_SITE_NEWS_EDIT','6');
+define('ACL_SITE_NEWS','7');
+define('ACL_SITE_NEWS_POST','7');
+define('ACL_SITE_NEWS_VIEW','7');
 
-define('ACL_SITE_ADS','6');
-define('ACL_SITE_CONFIG','6');
-define('ACL_SITE_MAIL_CONFIG','6');
-define('ACL_SITE_SOCIAL','6');
-define('ACL_SITE_FB','6');
+define('ACL_SITE_ADS','7');
+define('ACL_SITE_CONFIG','7');
+define('ACL_SITE_CONFIG_MAIL','7');
+define('ACL_SITE_SOCIAL','7');
+define('ACL_SITE_FB','7;7');
+
+//Users
+define('ACL_USERS_VIEW','7');
+define('ACL_USERS_BAN','7');
+
+//Shop
+define('ACL_SHOP_STATS','7');
+define('ACL_SHOP_VOUCHER','7');
+define('ACL_SHOP_CONFIG_MONEY','7');
+define('ACL_SHOP_BADGES','7');
+define('ACL_SHOP_RARES','7;6');
+define('ACL_SHOP_PAIEMENT','7');
+define('ACL_SHOP_PAIEMENT_LOGS','7');
+
+//Support
+define('ACL_SUPPORT_ARTICLES','7');
+define('ACL_SUPPORT_CATEGORIES','7');
+
+//Logs
+define('ACL_LOGS_VIEW','7');
+
+//Pages
+define('ACL_PAGES_ADD','7');
+define('ACL_PAGES_VIEW','7');
+
+
+//Form
+define('ACL_FORM_MANAGE','7;7');
 
 ?>

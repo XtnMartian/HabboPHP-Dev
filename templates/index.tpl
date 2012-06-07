@@ -211,7 +211,7 @@ HabboView.add( function() {
                         <a href="#" id="forgot-password"><span>{#password_forgotten#}</span></a>
                     </div>
                 </div>
-				<input type="hidden" name="token" value="{$token}"/>
+				<input type="hidden" name="token" id="token" value="{$token}"/>
                <div id="login-form-submit">
                     <input type="submit" value="Entrer" class="login-top-button" id="login-submit-button" style="margin-top: -10000px; margin-right: -10000px; margin-bottom: -10000px; margin-left: -10000px; position: absolute; ">
                     
