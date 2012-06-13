@@ -67,7 +67,7 @@ jQuery.noConflict();
 				
 				    $active.addClass("last-active");
 				
-				    $next.addClass("active")
+				    $next.addClass("active");
 				   	$active.removeClass("active last-active");
 				}
 				

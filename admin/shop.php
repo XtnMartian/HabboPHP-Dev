@@ -103,10 +103,24 @@ $admin=true;
             </div>
             
           </div>
+          <div class="control-group">
+            <label class="control-label" for="input01"><?php echo $lang['WinWinGet']; ?></label>
+            <div class="controls">
+              <input type="text" value="<?php echo $config->winwin; ?>" class="wget" id="wget">
+            </div>
+            
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="input01"><?php echo $lang['WinWinPrix']; ?></label>
+            <div class="controls">
+              <input type="text" value="<?php echo $config->winwinprix; ?>" class="wprix" id="wprix">
+            </div>
+            
+          </div>
           
           
           <div class="form-actions">
-            <button type="submit" class="btn btn-primary" onclick="setconfig($('#moneyname').val(),'moneyname');setconfig($('#vip').val(),'vipprice');"><?php echo $lang['Update']; ?></button>
+            <button type="submit" class="btn btn-primary" onclick="setconfig($('#moneyname').val(),'moneyname');setconfig($('#vip').val(),'vipprice');setconfig($('#wget').val(),'winwin');setconfig($('#wprix').val(),'winwinprix');"><?php echo $lang['Update']; ?></button>
           </div>
         </fieldset>
       </div>

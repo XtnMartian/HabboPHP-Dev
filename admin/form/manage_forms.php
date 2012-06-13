@@ -7,6 +7,9 @@
  
  More info at: http://www.appnitro.com/
  ********************************************************************************/
+ 
+ 	require('includes/header.php'); 
+ 
 	require('includes/init.php');
 
 	require('config.php');
@@ -244,7 +247,7 @@ EOT;
 	
 	$current_nav_tab = 'manage_forms';
 	
-	require('includes/header.php'); 
+	
 	
 ?>
 <br />

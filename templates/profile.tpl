@@ -6,19 +6,19 @@
 <div class="habblet-container" style="float:left; width:210px;">
 <div class="cbb settings">
 
-<h2 class="title">Mes Préférences</h2>
+<h2 class="title">{#AccountSettings#}</h2>
 <div class="box-content">
             <div id="settingsNavigation">
             <ul>
 
-                <li class="selected">Mission
+                <li class="selected">{#Mission#}
                 </li>
 
 
-                <li ><a href="{$config->url_site}/profile.php?page=password">Mot de passe</a>
+                <li ><a href="{$config->url_site}/profile.php?page=password">{#Password#}</a>
                 </li>
 
-                <li ><a href="{$config->url_site}/friendsmanagement.php">Gestion des amis</a>
+                <li ><a href="{$config->url_site}/friendsmanagement.php">{#FriendManagement#}</a>
                 </li>
 
             </ul>
@@ -50,10 +50,10 @@
 <form action="" method="post" id="profileForm">
 <input type="hidden" name="tab" value="true" />
 
-<h3>Ton statut</h3>
+<h3>{#Your_status#}</h3>
 
 <p>
-Ta mission apparaîtra sur ta Habbo Home page et sur ton Habbo à l'intérieur de l'hôtel.
+{#Mission_info#}
 </p>
 
 <p>
@@ -71,7 +71,7 @@ Ta mission apparaîtra sur ta Habbo Home page et sur ton Habbo à l'intérieur d
 <h3>Visibilité</h3>
 
 <p>
-Qui a le droit de voir si tu es connecté : </p><p>
+{#Permission_view_online#}: </p><p>
 <label><input type="radio" name="visibility" value="0" {if $user->hide_online eq '0'} checked="checked"{/if} />tout le monde</label>
 <label><input type="radio" name="visibility" value="1"  {if $user->hide_online eq '1'} checked="checked"{/if} />personne</label>
 </p>

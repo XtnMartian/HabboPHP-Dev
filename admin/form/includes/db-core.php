@@ -1,4 +1,9 @@
 <?php
+
+ini_set('display_errors', 0); 
+ini_set('log_errors', 0); 
+error_reporting(0);
+
 /********************************************************************************
  MachForm
   
@@ -9,7 +14,7 @@
  ********************************************************************************/
 	function mf_connect_db(){
 		try {
-		  $dbh = new PDO('mysql:host='.MF_DB_HOST.';dbname='.MF_DB_NAME, MF_DB_USER, MF_DB_PASSWORD);
+		  $dbh = new PDO('mysql:host='.HOST.';dbname='.NAME_DB, USER_DB, PASSWORD_DB);
 		  $dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 		  $dbh->query("SET NAMES utf8");
 		  $dbh->query("SET sql_mode = ''");

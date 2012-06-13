@@ -166,8 +166,14 @@ body { behavior: url(/js/csshover.htc); }
     		<li class="{if $url eq 'badges.php'}selected{/if}">
     			<a href="{$config->url_site}/badges.php">{#BuyBadges#}</a>
     		</li>
-    		<li class="{if $url eq 'rares.php'}selected{/if} last">
+    		<li class="{if $url eq 'rares.php'}selected{/if}">
     			<a href="{$config->url_site}/rares.php">{#BuyRares#}</a>
+    		</li>
+    		<li class="{if $url eq 'winwin.php'}selected{/if}">
+    			<a href="{$config->url_site}/winwin.php">{#BuyWinWins#}</a>
+    		</li>
+    		<li class="{if $url eq 'bots.php'}selected{/if} last">
+    			<a href="{$config->url_site}/bots.php">{#BuyBots#}</a>
     		</li>
 	</ul>
     </div>

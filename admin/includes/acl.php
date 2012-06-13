@@ -8,16 +8,15 @@
 #|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|
 
 /*
-@info : Sur se fichier vous pouvez définir le rank MINIMUM a avoir pour pouvoir voir ou faire une action sur l'administration
 @tuto : Pour ajouter un autorisation à un rank, séparez le deuxième paramètre par un ";" ex : define('ACL_MENU_SERVER','7,5,4');
 @warning : Ne pas mettre deux fois le même chiffre : 7;7
 */
 
 //Global
-define('ACL_GLOBAL_ADMIN','7'); //Les ranks qui ont le droit d'accéder à l'administration
+define('ACL_GLOBAL_ADMIN','7;6;8'); //Les ranks qui ont le droit d'accéder à l'administration
 
 //Index
-define('ACL_INDEX_STATS','7');
+define('ACL_INDEX_STATS','7;8');
 define('ACL_INDEX_NOTES','7');
 
 

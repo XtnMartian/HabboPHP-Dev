@@ -56,6 +56,7 @@ Buy = Ach&egrave;te des
 BuyRares = 	Rares
 BuyBadges = Badges
 RaresShop = Boutiques des Rares
+BuyBots = Bots
 
 ######################################################
 # Register
@@ -152,6 +153,18 @@ You_dont_like = Tu n'en aimes aucun ?
 See_more_looks = Voir plus de look
 no_panique_you_can_change_after = Pas de panique - Tu pourras changer ta tenue plus tard.
 profile_update_success = Mise à jours effectu&eacute;e.
+
+
+######################################################
+# Profil
+######################################################
+
+Mission = Mission
+Password = Mot de passe
+Mission_info = Ta mission apparaîtra sur ta Habbo Home page et sur ton Habbo à l'intérieur de l'hôtel. 
+Permission_view_online = Qui a le droit de voir si tu es connecté :
+Your_status = Ton statut :
+
 
 
 ######################################################
@@ -262,6 +275,10 @@ Success_get_coins = F&eacute;licitation ! Tu as reçu tes
 Error_buy = Une erreur est survenue
 ConfirmBuy = Confirmes-tu cet achat ?
 SelectPaiement = Tu dois choisir un mode de paiement
+
+YouHaveNoRooms = Tu n'as pas de rooms !
+SuccessWinWin = Tu as reçu tes WinWin
+BuyWinWins = WinWin
 
 
 ######################################################

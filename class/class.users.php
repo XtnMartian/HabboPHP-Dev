@@ -21,7 +21,7 @@ class Users{
 											account_created,
 											vip,
 											hide_inroom,
-											hide_online',
+											hide_online,look',
 											
 							'butterfly' =>	'id,
 											password,
@@ -94,6 +94,12 @@ class Users{
 			return true ;
 	}
 	
+	public function addWinWin($winwin){
+		if(is_numeric($winwin)){
+			$this->_db->query('UPDATE user_stats SET AchievementScore=AchievementScore+'.$winwin.' WHERE id="'.$this->id.'"');
+		}
+	}
+	
 	//Jetons
 	
 	public function addJetonsToUsers($number){
@@ -162,6 +168,21 @@ class Users{
 			'id' => $this->id
 		);
 		$this->_db->save($data);
+	}
+	
+	//Rooms
+	
+	public function loadRooms(){
+		$dataRooms = $this->_db->query("SELECT * FROM rooms WHERE owner = '".$this->username."'",true);
+		return $dataRooms ;
+	}
+	
+	public function haveRooms(){
+		$dataRooms = $this->loadRooms();
+			if($dataRooms != NULL){
+				return true;
+			}
+		return false ;
 	}
 	
 	

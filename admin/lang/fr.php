@@ -317,5 +317,7 @@ $lang=array(
 	"AddRare" => "Ajouter un rare",
 	"NeedIDRare" => "Un ID rare est obligatoire",
 	"ManageRareShop" => "Gestion des Rares",
-	"IDRare" => "ID Rare"
+	"IDRare" => "ID Rare",
+	"WinWinGet" => "WinWin gagné",
+	"WinWinPrix" => "Prix WinWin"
  );

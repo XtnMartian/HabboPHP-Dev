@@ -60,6 +60,7 @@ class Auth{
 	}
 	
 	public function connexionFB($fid,$m = NULL){
+	sleep(1);
 		$fid = safe($fid,'SQL');
 		$this->_db->query('SELECT * FROM habbophp_users_facebook WHERE fid='.safe($fid,'SQL'));
 		if($this->_db->NumRowsC() == 1){
@@ -95,6 +96,7 @@ class Auth{
 	}
 	
 	public function connexion($tab,$m = NULL){
+	sleep(1); //Anti bruteforce
 		$pseudo = safe($tab['username'],'SQL');
 		$password = safe($tab['password'],'SQL');
 		if($m)

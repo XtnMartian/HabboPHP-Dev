@@ -5,18 +5,8 @@ MachForm Configuration File
 
 /** MySQL settings **/
 
-include_once "../../includes/settings.inc.php";
-
-define('MF_DB_NAME', NAME_DB); //The name of your database. Note that this database must exist before running installer.php
-define('MF_DB_USER', USER_DB); //Your database username
-define('MF_DB_PASSWORD', PASSWORD_DB); //Your database users password
-define('MF_DB_HOST', HOST); //The hostname for your database
-
-
-
-
 /** YOU CAN LEAVE THE SETTINGS BELOW THIS LINE UNCHANGED **/
-
+require '../../includes/settings.inc.php'; 
 /** Optional Settings **/
 /** All settings below this line are optionals, you can leave them as they are now **/
 define('MF_TABLE_PREFIX', 'habbophp_form_'); //The prefix for all machform tables

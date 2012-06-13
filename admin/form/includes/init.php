@@ -14,4 +14,7 @@
 	@error_reporting(0);
 	@header("Content-Type: text/html; charset=UTF-8");
 	require '../lang/fr.php' ;
+	
+
+	
 ?>
