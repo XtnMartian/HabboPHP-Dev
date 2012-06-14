@@ -1,10 +1,6 @@
 <?php
-session_start();
-define('CORE','CORE');
-$admin = true ;
-include("../../includes/core.php");
-if(!$Auth->isConnected()) redirection('/logout.php');
-if($user->rank<7) exit();
+
+require '../includes/init.php' ;
 
 $per_page = 5;
 $sqlc = "show columns from habbophp_news_images";

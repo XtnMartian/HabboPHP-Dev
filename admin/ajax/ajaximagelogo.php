@@ -1,11 +1,5 @@
 <?php
-session_start();
-define("CORE","CORE");
-$admin=true;
-include "../../includes/core.php";
-if(!$Auth->isConnected()) redirection('/logout.php');
-if($user->rank<7) exit();
-$session_id='1'; //$session id
+require '../includes/init.php' ;
 $path = "../../web-gallery/images/";
 
 	$valid_formats = array("jpg", "png", "gif", "bmp");

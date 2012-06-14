@@ -1,12 +1,10 @@
 <?php
-session_start();
-define("CORE","CORE");
-$admin = true ;
-include "../../includes/core.php";
-if(!$Auth->isConnected()) redirection('/logout.php');
-if($user->rank<7) exit();
-$session_id='1'; //$session id
+
+require '../includes/init.php' ;
+
 $path = "../../images/news/";
+
+
 
 	$valid_formats = array("jpg", "png", "gif", "bmp");
 	if(isset($_POST) and $_SERVER['REQUEST_METHOD'] == "POST")

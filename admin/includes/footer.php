@@ -51,14 +51,15 @@
 $(document).ready(function(){
 	new nicEditor().panelInstance('tai');    
 	$('.tabs a:first').tab('show')
+	var token = $('#token').val();
 	$("#paging_buttonn a").click(function(){
 		$("#paging_buttonn a").css({'border' : '1px solid #fff'});
 		$(this).css({'border' : '1px solid #ccc'});
-		$("#imagenews").load("ajax/imagenews.php?page=" + this.id);	
+		$("#imagenews").load("ajax/imagenews.php?page=" + this.id +"&token="+token);	
 		return false;
 	});
 	$("#1").css({'border' : '1px solid #ccc'});
-	$("#imagenews").load("ajax/imagenews.php?page=1");
+	$("#imagenews").load("ajax/imagenews.php?page=1&token="+token);
 	
 	
 	$.post('ajax/getban.php',{ page:1 },function(data){

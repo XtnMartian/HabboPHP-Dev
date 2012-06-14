@@ -56,7 +56,7 @@
 		<div class="tab-pane" id="upload">
 	
 			<form id="imageform" method="post" enctype="multipart/form-data" action='ajax/ajaximage.php'>
-				<div class="form-actions"><span class="btn btn-primary fileinput-button">
+					<div class="form-actions"><span class="btn btn-primary fileinput-button">
                     <i class="icon-plus icon-white"></i>
                     <span><?php echo $lang['ChooseImage']; ?></span>
                     <input type="file" name="photoimg" id="photoimg" />

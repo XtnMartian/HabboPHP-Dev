@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-06-13 23:57:56
+<?php /* Smarty version Smarty-3.1.8, created on 2012-06-14 12:23:29
          compiled from "/Users/Robin/github/local/HabboPHP-Dev/templates/vip.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:6190627704fd90ce4a65f10-18001779%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2723293204fd9bba12ee242-90462766%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e7998ab0d6e44ddc24200959e174675dd7f5d6a4' => 
     array (
       0 => '/Users/Robin/github/local/HabboPHP-Dev/templates/vip.tpl',
-      1 => 1339059077,
+      1 => 1339669332,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '6190627704fd90ce4a65f10-18001779',
+  'nocache_hash' => '2723293204fd9bba12ee242-90462766',
   'function' => 
   array (
   ),
@@ -21,9 +21,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fd90ce4a8ff34_61578390',
+  'unifunc' => 'content_4fd9bba1312267_40809797',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fd90ce4a8ff34_61578390')) {function content_4fd90ce4a8ff34_61578390($_smarty_tpl) {?><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<?php if ($_valid && !is_callable('content_4fd9bba1312267_40809797')) {function content_4fd9bba1312267_40809797($_smarty_tpl) {?><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['config']->value->url_site;?>
 /web-gallery/js/vip.js"></script>
 <script>
@@ -284,8 +284,8 @@ jQuery( ".slider" ).slider({
      	 var price = <?php echo $_smarty_tpl->tpl_vars['config']->value->vipprice;?>
  * ui.value;
      	 
-         jQuery( "#slider-result" ).html( ui.value+' mois = '+price+' <?php echo $_smarty_tpl->tpl_vars['config']->value->moneyname;?>
-' );
+         jQuery( "#slider-result" ).html( ui.value+" mois = "+price+" <?php echo $_smarty_tpl->tpl_vars['config']->value->moneyname;?>
+" );
      },
      change: function(event, ui) { 
      jQuery('#hidden').attr('value', ui.value);

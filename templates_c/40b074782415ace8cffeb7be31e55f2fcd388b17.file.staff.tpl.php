@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-06-10 11:54:02
+<?php /* Smarty version Smarty-3.1.8, created on 2012-06-14 12:23:08
          compiled from "/Users/Robin/github/local/HabboPHP-Dev/templates/staff.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:8730500784fd46eba759fe9-86602677%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:5273715204fd9bb8ca8eb56-07957774%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '40b074782415ace8cffeb7be31e55f2fcd388b17' => 
     array (
       0 => '/Users/Robin/github/local/HabboPHP-Dev/templates/staff.tpl',
-      1 => 1339059080,
+      1 => 1339442162,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '8730500784fd46eba759fe9-86602677',
+  'nocache_hash' => '5273715204fd9bb8ca8eb56-07957774',
   'function' => 
   array (
   ),
@@ -25,9 +25,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fd46eba89e0d7_76768685',
+  'unifunc' => 'content_4fd9bb8cc1e253_20910344',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fd46eba89e0d7_76768685')) {function content_4fd46eba89e0d7_76768685($_smarty_tpl) {?>﻿<?php  $_config = new Smarty_Internal_Config("lang/".($_smarty_tpl->tpl_vars['lang']->value).".lang", $_smarty_tpl->smarty, $_smarty_tpl);$_config->loadConfigVars(null, 'local'); ?>
+<?php if ($_valid && !is_callable('content_4fd9bb8cc1e253_20910344')) {function content_4fd9bb8cc1e253_20910344($_smarty_tpl) {?>﻿<?php  $_config = new Smarty_Internal_Config("lang/".($_smarty_tpl->tpl_vars['lang']->value).".lang", $_smarty_tpl->smarty, $_smarty_tpl);$_config->loadConfigVars(null, 'local'); ?>
 <style>
 label{
 	width: 150px;
@@ -113,7 +113,7 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 				
 				    $active.addClass("last-active");
 				
-				    $next.addClass("active")
+				    $next.addClass("active");
 				   	$active.removeClass("active last-active");
 				}
 				

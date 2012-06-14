@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-06-14 00:13:33
+<?php /* Smarty version Smarty-3.1.8, created on 2012-06-14 00:52:40
          compiled from "/Users/Robin/github/local/HabboPHP-Dev/templates/bots.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:903215624fd9108d86c051-78775786%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:448848734fd919b84038a4-86689524%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '903215624fd9108d86c051-78775786',
+  'nocache_hash' => '448848734fd919b84038a4-86689524',
   'function' => 
   array (
   ),
@@ -23,9 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fd9108d8bcdc2_04542322',
+  'unifunc' => 'content_4fd919b84821a9_30164098',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fd9108d8bcdc2_04542322')) {function content_4fd9108d8bcdc2_04542322($_smarty_tpl) {?><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<?php if ($_valid && !is_callable('content_4fd919b84821a9_30164098')) {function content_4fd919b84821a9_30164098($_smarty_tpl) {?><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['config']->value->url_site;?>
 /web-gallery/js/vip.js"></script>
 <script>

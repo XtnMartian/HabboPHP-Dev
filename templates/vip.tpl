@@ -255,7 +255,7 @@ jQuery( ".slider" ).slider({
      slide: function( event, ui ) { {/literal}
      	 var price = {$config->vipprice} * ui.value;
      	 {literal}
-         jQuery( "#slider-result" ).html( ui.value+' mois = '+price+'{/literal} {$config->moneyname}{literal}' );
+         jQuery( "#slider-result" ).html( ui.value+" mois = "+price+"{/literal} {$config->moneyname}{literal}" );
      },
      change: function(event, ui) { 
      jQuery('#hidden').attr('value', ui.value);
@@ -298,7 +298,7 @@ border-radius:25px;
 border:2px solid #000;
 }
 
-/*Result div where the slider value is displayed*/
+/*Result div where the slider value is*/
 #slider-result {
 font-size:50px;
 margin:10px;

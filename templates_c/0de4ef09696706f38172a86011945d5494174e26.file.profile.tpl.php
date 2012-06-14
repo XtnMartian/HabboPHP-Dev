@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-06-13 23:35:51
+<?php /* Smarty version Smarty-3.1.8, created on 2012-06-14 12:30:42
          compiled from "/Users/Robin/github/local/HabboPHP-Dev/templates/profile.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:19280179244fd907b7981a09-76494914%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:19744290054fd9bd5219d8b8-02080782%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '19280179244fd907b7981a09-76494914',
+  'nocache_hash' => '19744290054fd9bd5219d8b8-02080782',
   'function' => 
   array (
   ),
@@ -26,9 +26,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fd907b79f2116_55418060',
+  'unifunc' => 'content_4fd9bd5225c2e0_77412418',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fd907b79f2116_55418060')) {function content_4fd907b79f2116_55418060($_smarty_tpl) {?><div id="container">
+<?php if ($_valid && !is_callable('content_4fd9bd5225c2e0_77412418')) {function content_4fd9bd5225c2e0_77412418($_smarty_tpl) {?><div id="container">
 	<div id="content" style="position: relative" class="clear fix">
     <div>
 

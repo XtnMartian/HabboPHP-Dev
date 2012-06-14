@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-06-14 00:19:28
+<?php /* Smarty version Smarty-3.1.8, created on 2012-06-14 12:23:17
          compiled from "/Users/Robin/github/local/HabboPHP-Dev/templates/shop.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:14524660764fd911f082c840-55426350%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:4754533614fd9bb954302d3-27475270%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '14524660764fd911f082c840-55426350',
+  'nocache_hash' => '4754533614fd9bb954302d3-27475270',
   'function' => 
   array (
   ),
@@ -26,9 +26,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fd911f08dc140_11551604',
+  'unifunc' => 'content_4fd9bb954c9490_84772240',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fd911f08dc140_11551604')) {function content_4fd911f08dc140_11551604($_smarty_tpl) {?><input type="hidden" name="token" value="<?php echo $_smarty_tpl->tpl_vars['token']->value;?>
+<?php if ($_valid && !is_callable('content_4fd9bb954c9490_84772240')) {function content_4fd9bb954c9490_84772240($_smarty_tpl) {?><input type="hidden" name="token" value="<?php echo $_smarty_tpl->tpl_vars['token']->value;?>
 " id="token"/>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['config']->value->url_site;?>

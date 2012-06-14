@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-06-14 00:19:37
+<?php /* Smarty version Smarty-3.1.8, created on 2012-06-14 12:30:44
          compiled from "/Users/Robin/github/local/HabboPHP-Dev/templates/header.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:14799433084fd911f994e026-11819445%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9496671064fd9bd544a2897-48872184%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'a9ddf8f7d7d9bb348e68ecd2ebce96816aa65bc5' => 
     array (
       0 => '/Users/Robin/github/local/HabboPHP-Dev/templates/header.tpl',
-      1 => 1339625626,
+      1 => 1339628270,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '14799433084fd911f994e026-11819445',
+  'nocache_hash' => '9496671064fd9bd544a2897-48872184',
   'function' => 
   array (
   ),
@@ -25,9 +25,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fd911f9b4d874_05324827',
+  'unifunc' => 'content_4fd9bd546b2d33_25263937',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fd911f9b4d874_05324827')) {function content_4fd911f9b4d874_05324827($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+<?php if ($_valid && !is_callable('content_4fd9bd546b2d33_25263937')) {function content_4fd9bd546b2d33_25263937($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
@@ -265,16 +265,12 @@ body { behavior: url(/js/csshover.htc); }
 /rares.php"><?php echo $_smarty_tpl->getConfigVariable('BuyRares');?>
 </a>
     		</li>
-    		<li class="<?php if ($_smarty_tpl->tpl_vars['url']->value=='winwin.php'){?>selected<?php }?>">
+    		<li class="<?php if ($_smarty_tpl->tpl_vars['url']->value=='winwin.php'){?>selected<?php }?> last">
     			<a href="<?php echo $_smarty_tpl->tpl_vars['config']->value->url_site;?>
 /winwin.php"><?php echo $_smarty_tpl->getConfigVariable('BuyWinWins');?>
 </a>
     		</li>
-    		<li class="<?php if ($_smarty_tpl->tpl_vars['url']->value=='bots.php'){?>selected<?php }?> last">
-    			<a href="<?php echo $_smarty_tpl->tpl_vars['config']->value->url_site;?>
-/bots.php"><?php echo $_smarty_tpl->getConfigVariable('BuyBots');?>
-</a>
-    		</li>
+    		
 	</ul>
     </div>
  <?php }?>
