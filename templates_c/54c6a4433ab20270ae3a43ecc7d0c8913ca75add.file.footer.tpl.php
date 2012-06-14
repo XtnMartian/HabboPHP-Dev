@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-06-14 13:33:11
+<?php /* Smarty version Smarty-3.1.8, created on 2012-06-14 20:57:37
          compiled from "/Users/Robin/github/local/HabboPHP-Dev/templates/footer.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:19527409734fd9cbf782da46-61014040%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:11761942734fda3421480579-29342321%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,7 +11,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '19527409734fd9cbf782da46-61014040',
+  'nocache_hash' => '11761942734fda3421480579-29342321',
   'function' => 
   array (
   ),
@@ -23,9 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fd9cbf78e6202_92079607',
+  'unifunc' => 'content_4fda34214dca06_19909098',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fd9cbf78e6202_92079607')) {function content_4fd9cbf78e6202_92079607($_smarty_tpl) {?><?php  $_config = new Smarty_Internal_Config("lang/".($_smarty_tpl->tpl_vars['lang']->value).".lang", $_smarty_tpl->smarty, $_smarty_tpl);$_config->loadConfigVars(null, 'local'); ?>
+<?php if ($_valid && !is_callable('content_4fda34214dca06_19909098')) {function content_4fda34214dca06_19909098($_smarty_tpl) {?><?php  $_config = new Smarty_Internal_Config("lang/".($_smarty_tpl->tpl_vars['lang']->value).".lang", $_smarty_tpl->smarty, $_smarty_tpl);$_config->loadConfigVars(null, 'local'); ?>
 <div id="column3" class="column">
 		
 

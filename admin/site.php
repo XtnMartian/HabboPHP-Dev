@@ -318,6 +318,52 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js"&gt;
       </div>
     </div>
   </div>
+  
+  <div class="row">
+    <div class="span3">
+      <h3><?php echo $lang['Keywords']; ?></h3>
+      <p><?php echo $lang['KeywordsInfo']; ?></p>
+    </div>
+    <div class="span9">
+      <div class="well">
+        <input type="text" class="span3" id="keywords" style="width:800px" value="<?php echo $config->meta_keywords; ?>">
+        <label class="checkbox">
+        </label>
+        <button type="button" onclick="setconfig($('#keywords').val(),'meta_keywords');" class="btn"><?php echo $lang['Update']; ?></button>
+      </div>
+    </div>
+  </div>
+  
+   <div class="row">
+    <div class="span3">
+      <h3><?php echo $lang['Description']; ?></h3>
+      <p><?php echo $lang['DescriptionInfo']; ?></p>
+    </div>
+    <div class="span9">
+      <div class="well">
+        <input type="text" class="span3" id="meta_description" style="width:800px;" value="<?php echo $config->meta_description; ?>">
+        <label class="checkbox">
+        </label>
+        <button type="button" onclick="setconfig($('#meta_description').val(),'meta_description');" class="btn"><?php echo $lang['Update']; ?></button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="span3">
+      <h3><?php echo $lang['WelcomeMessage']; ?></h3>
+      <p><?php echo $lang['WelcomeMessageInfo']; ?></p>
+    </div>
+    <div class="span9">
+      <div class="well">
+        <input type="text" class="span3" id="welcome_message" style="width:800px;" value="<?php echo $config->welcome_message; ?>">
+        <label class="checkbox">
+        </label>
+        <button type="button" onclick="setconfig($('#welcome_message').val(),'welcome_message');" class="btn"><?php echo $lang['Update']; ?></button>
+      </div>
+    </div>
+  </div>
+  
    <div class="row">
     <div class="span3">
       <h3><?php echo $lang['EmailContact']; ?></h3>

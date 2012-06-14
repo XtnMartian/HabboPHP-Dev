@@ -190,7 +190,7 @@ class Smarty_Internal_Config {
         } catch (Exception $e) {
             // restore old timestamp in case of error
             if ($this->smarty->compile_locking && $saved_timestamp) {
-                touch($this->getCompiledFilepath(), $saved_timestamp);
+                @touch($this->getCompiledFilepath(), $saved_timestamp);
             }
             throw $e;
         }

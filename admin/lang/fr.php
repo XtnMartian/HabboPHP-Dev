@@ -319,5 +319,11 @@ $lang=array(
 	"ManageRareShop" => "Gestion des Rares",
 	"IDRare" => "ID Rare",
 	"WinWinGet" => "WinWin gagné",
-	"WinWinPrix" => "Prix WinWin"
+	"WinWinPrix" => "Prix WinWin",
+	"Keywords" => "Meta Keywords",
+	"KeywordsInfo" => "Balise Meta Keywords",
+	"Description" => "Meta Description",
+	"DescriptionInfo" => "Décrivez votre hotel",
+	"WelcomeMessage" => "Message d'index",
+	"WelcomeMessageInfo" => "Personnalisez le message d'accueil de votre site" 
  );

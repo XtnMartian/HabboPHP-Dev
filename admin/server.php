@@ -54,10 +54,16 @@
                <p class="help-block"><?php echo $lang['HelpSWF']; ?></p>
             </div>
           </div>
+          <div class="control-group">
+            <label class="control-label" for="inswf">Base</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" value="<?php echo $config->server_base ; ?>" id="inbase">
+            </div>
+          </div>
           
           
           <div class="form-actions">
-            <button type="submit" onclick="editServer();setconfig($('#port').val(),'server_port');" class="btn btn-primary"><?php echo $lang['Update']; ?></button>
+            <button type="submit" onclick="editServer();setconfig($('#port').val(),'server_port');setconfig($('#inbase').val(),'server_base');" class="btn btn-primary"><?php echo $lang['Update']; ?></button>
           </div>
         </fieldset>
       </div>

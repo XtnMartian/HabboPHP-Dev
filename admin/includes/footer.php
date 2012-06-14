@@ -89,7 +89,8 @@ function addRareManage(){
 }
 
 function deleteRareManager(id){
-	$.post('ajax/deleteRareManager.php',{id:id},function(data){
+	var token = $('#token').val();
+	$.post('ajax/deleteRareManager.php',{id:id,token:token},function(data){
 		$('#r'+id).fadeOut();
 	});
 }

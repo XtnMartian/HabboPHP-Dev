@@ -103,7 +103,7 @@ var flashvars ={
 "flash.client.origin" : "popup" 
 };
     var params ={
-        "base" : "<?php echo $config->server_swf; ?>",
+        "base" : "<?php echo $config->server_base; ?>",
         "allowScriptAccess" : "always",
         "menu" : "false"                
    };
