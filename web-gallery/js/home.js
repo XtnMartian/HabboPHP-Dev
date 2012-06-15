@@ -73,7 +73,7 @@ function deletewidget(id,type) {
 		$('#image-'+id+'').fadeOut(); 
 		$('#widget-'+id+'').fadeOut(); 
 		updated(); 
-		alert(id);
+	//	alert(id);
 	});
 }
 
@@ -81,7 +81,7 @@ function hidewidget(id,type) {
 	var token = $('#token').val();
 	$.get('ajax/hp_hide.php?id='+id+'&type='+type+'&token='+token, function(data) { 
 		$('#widget-'+type+'-'+id+'').fadeOut(); 
-		alert(data) ;
+		//alert(data) ;
 		updated(); 
 	});
 }
@@ -89,7 +89,7 @@ function hidewidget(id,type) {
 function updatebg(classe) {
 	var token = $('#token').val();
 	$.get('ajax/hp_updatebg.php?class='+classe+'&token='+token, function(data) { 
-		alert(data);
+		//alert(data);
 		$('#playground').removeClass(); 
 		$('#playground').addClass(classe); 
 		updated(); 
