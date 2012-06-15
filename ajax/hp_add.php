@@ -1,7 +1,7 @@
 <?php
 
 require '../init.php';
-if(!Validate::ValideInput(array('id' => 'isNumeric','type' => 'isCleanHomeType','color' => 'isClean'))) exit ;
+if(!Validate::ValideInput(array('type' => 'isCleanHomeType','color' => 'isClean'))) exit ;
 $value=safe($_GET['value'],'SQL'); //link of image (for images only)
 $type=safe($_GET['type'],'SQL'); //image or note
 $color=safe($_GET['color'],'SQL'); //color
