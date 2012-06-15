@@ -20,7 +20,7 @@
 				<div class="habblet-container ">		
 						<div class="cbb clearfix orange ">
 	
-							<h2 class="title">{if isset($smarty.get.success)}<b>{#Success_get_coins#} {$config->name}</b>
+							<h2 class="title">{if isset($smarty.get.success)}<b>{#Success_get_coins#} {$config->moneyname}</b>
 							{elseif isset($smarty.get.error)}{#Error_buy#}
 							{else}Choisis ton mode de paiement{/if}
 							</h2>
