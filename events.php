@@ -23,6 +23,7 @@ if($newsData != NULL){
 	$tpl->assign('title',$newsData['title']);
 	$tpl->assign('content',$newsData['content']);
 	$tpl->assign('news_existe','true');
+	$tpl->assign('displayComment',$newsData['comment']);
 }
 if($newsData == NULL){
 	$row=$db->query("SELECT * FROM habbophp_news ORDER BY id DESC LIMIT 1",true,false);

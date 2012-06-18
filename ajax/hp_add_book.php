@@ -1,7 +1,6 @@
 <?php
 require '../init.php' ;
 
-if(Validate::ValideInput(array('value' => 'isClean','to' => 'isNumeric'))) exit ;
 
 $to=    (int) safe($_GET['to'],'SQL'); 
 $value= (string) safe($_GET['value'],'SQL'); 

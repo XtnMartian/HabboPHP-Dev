@@ -66,7 +66,7 @@
 </div>
 </div>
 
-{if $comments_type eq 'normal'}
+{if $comments_type eq 'normal' && $displayComment eq '1'}
 
 <div class="cbb clearfix green">
 	<h2 class="title" id="post">Poster un commentaire</h2>
