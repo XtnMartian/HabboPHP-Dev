@@ -1,6 +1,4 @@
 <?php
-echo '1' ;
-exit ;
 
 define('RANK','6');
 require '../includes/init.php';
