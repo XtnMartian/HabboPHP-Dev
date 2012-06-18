@@ -7,6 +7,10 @@
  
  More info at: http://www.appnitro.com/
  ********************************************************************************/
+ini_set('display_errors', 0); 
+ini_set('log_errors', 0); 
+error_reporting(0);
+ define('SETTINGS','true');
 	require('includes/init.php');
 	
 	require('config.php');

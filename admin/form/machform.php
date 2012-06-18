@@ -7,7 +7,7 @@
  
  More info at: http://www.appnitro.com/
  ********************************************************************************/
-	error_reporting(E_ALL ^ E_NOTICE);
+	error_reporting(0);
 
 	$include_path = dirname(__FILE__).'/';
 

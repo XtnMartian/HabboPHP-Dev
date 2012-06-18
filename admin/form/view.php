@@ -109,5 +109,6 @@
 	
 	header("Content-Type: text/html; charset=UTF-8");
 	echo $markup;
+	echo '<br style="clear:both"/>';
 	
 ?>

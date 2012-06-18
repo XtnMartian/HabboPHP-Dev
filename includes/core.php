@@ -85,8 +85,8 @@ if(!file_exists($file_settings)){
 /*+===================================+
 |   Importation des librarys          |
 +===================================+*/
-
-require	$path.'includes/settings.inc.php';
+if(!defined('SETTINGS'))
+	require	$path.'includes/settings.inc.php';
 
 require	$path.'class/html_dom.php' ;
 

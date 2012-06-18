@@ -7,7 +7,9 @@
  
  More info at: http://www.appnitro.com/
  ********************************************************************************/
-	
+ini_set('display_errors', 0); 
+ini_set('log_errors', 0); 
+error_reporting(0);	
 	//this function accept 'YYYY-MM-DD HH:MM:SS'
 	function mf_relative_date($input_date) {
 	    

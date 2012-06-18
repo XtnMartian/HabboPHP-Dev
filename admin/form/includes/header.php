@@ -7,7 +7,6 @@
 #|																		  #|
 #|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|#|
 
-define('RANK',6);
 require '../includes/init.php' ;
 
 ini_set('display_errors', 0); 

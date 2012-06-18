@@ -11,7 +11,7 @@
 							<div style="padding-left:30px;padding-right:30px;padding-top:15px;padding-bottom:15px;">
 							<div id="loader"><center><img src="images/load.gif" alt="" /><br />Chargement</center></div>
 <iframe src="{$config->url_site}/admin/form/view.php?id={$formid}" id="iframeform" width="695" scrolling="no" frameborder="0" style="border:0;opacity:0;display:none;" onload="resizer();"></iframe>
-
+<br style="clear:both"/>
 					</div>
 </div>
 		

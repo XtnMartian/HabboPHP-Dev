@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.8, created on 2012-06-07 19:31:38
+<?php /* Smarty version Smarty-3.1.8, created on 2012-06-18 17:49:14
          compiled from "/Users/Robin/github/local/HabboPHP-Dev/templates/form.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:14532589844fd0e57af3eee8-16583127%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:18665178714fdf4dfa501f31-12680367%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '773643f3c2e0c323de1979f6a2d4e83dd462f30c' => 
     array (
       0 => '/Users/Robin/github/local/HabboPHP-Dev/templates/form.tpl',
-      1 => 1339059075,
+      1 => 1340034281,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '14532589844fd0e57af3eee8-16583127',
+  'nocache_hash' => '18665178714fdf4dfa501f31-12680367',
   'function' => 
   array (
   ),
@@ -22,9 +22,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.8',
-  'unifunc' => 'content_4fd0e57b033682_49527025',
+  'unifunc' => 'content_4fdf4dfa50e244_79876342',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_4fd0e57b033682_49527025')) {function content_4fd0e57b033682_49527025($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_4fdf4dfa50e244_79876342')) {function content_4fdf4dfa50e244_79876342($_smarty_tpl) {?>
 <div id="container">
 	<div id="content" style="position: relative" class="clearfix">
    				<script type="text/javascript">if (!$(document.body).hasClassName('process-template')) { Rounder.init(); }</script>
@@ -39,7 +39,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <iframe src="<?php echo $_smarty_tpl->tpl_vars['config']->value->url_site;?>
 /admin/form/view.php?id=<?php echo $_smarty_tpl->tpl_vars['formid']->value;?>
 " id="iframeform" width="695" scrolling="no" frameborder="0" style="border:0;opacity:0;display:none;" onload="resizer();"></iframe>
-
+<br style="clear:both"/>
 					</div>
 </div>
 		

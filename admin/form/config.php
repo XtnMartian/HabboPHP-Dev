@@ -5,6 +5,10 @@ MachForm Configuration File
 
 /** MySQL settings **/
 
+ini_set('display_errors', 0); 
+ini_set('log_errors', 0); 
+error_reporting(0);
+
 /** YOU CAN LEAVE THE SETTINGS BELOW THIS LINE UNCHANGED **/
 require '../../includes/settings.inc.php'; 
 /** Optional Settings **/

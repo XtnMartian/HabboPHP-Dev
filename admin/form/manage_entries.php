@@ -7,6 +7,7 @@
  
  More info at: http://www.appnitro.com/
  ********************************************************************************/	
+ define('SETTINGS','true');
 	require('includes/init.php');
 	
 	require('config.php');
