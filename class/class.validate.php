@@ -25,7 +25,7 @@ class Validate
 		}
 	}
 	
-	public static function isCleanHomeType($type){
+	public static function isCleanHomeType($type) {
 		$type_liste = array('profil','badges','player','rooms','friends','books','groups','image');
 		return in_array($type,$type_liste);
 	}

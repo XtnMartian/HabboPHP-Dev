@@ -32,7 +32,7 @@
 	  padding: 5px;  
 	  font-family: verdana;  
 	  font-size: 10px;  
-	  color: #666666;  
+	  color: #666666 ;  
 	}  
 	</style> 
 	

@@ -2,7 +2,7 @@
 require 'init.php' ;
 
 $tpl->assign('groups','community');
-$tpl->display('header.tpl');
+$tpl->display('header.tpl') ;
 
 if(!isset($_GET['id'])){
 $row = $db->query("SELECT * FROM habbophp_news ORDER BY id DESC LIMIT 1",true,false);

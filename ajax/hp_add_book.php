@@ -1,5 +1,5 @@
 <?php
-require '../init.php';
+require '../init.php' ;
 
 if(Validate::ValideInput(array('value' => 'isClean','to' => 'isNumeric'))) exit ;
 
