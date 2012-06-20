@@ -1,6 +1,7 @@
 <?php
 @session_start();
 define('CORE','CORE');
+$admin=true;
 include "includes/core.php";
 
 if(!$Auth->isConnected()) redirection($config->url_site.'/logout.php');
