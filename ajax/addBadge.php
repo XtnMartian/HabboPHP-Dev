@@ -9,13 +9,14 @@ $req = $db->query('SELECT badge_id FROM user_badges WHERE badge_id="'.safe($badg
 if ($db->NumRowsC() == 0)
 {
 	$dataPlayer = $db->query('SELECT * FROM habbophp_shop_badges WHERE idbadge="'.safe($badge,'SQL').'"',true,false) ;
-
-	if($dataPlayer['amount'] <= $user->jetons)	
-	{ 
-		if($db->query("INSERT INTO user_badges (user_id,badge_id,badge_slot) VALUES ('".$user->id."','".$badge."','0')")) echo '1';
-		if($user->deleteJetons($dataPlayer['amount'])) echo '1' ;
+	if($db->NumRowsC() > 0){
+		if($dataPlayer['amount'] <= $user->jetons)	
+		{ 
+			if($db->query("INSERT INTO user_badges (user_id,badge_id,badge_slot) VALUES ('".$user->id."','".$badge."','0')")) echo '1';
+			if($user->deleteJetons($dataPlayer['amount'])) echo '1' ;
+		}
+		else echo 'nomoney' ;
 	}
-	else echo 'nomoney' ;
 }
 else
 echo'existe';
