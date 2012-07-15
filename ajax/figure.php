@@ -55,7 +55,7 @@ while($i != $count){
 
 echo'  <li id="'.$id.'" class="liFigure" onclick="changeAvatar(\''.$figure.'\',\''.$id.'\')"> <span class="bgtop"></span>
         <span class="bgbottom"></span>
-        <img   alt="'.$figure.'" src="http://www.habbo.com/habbo-imaging/avatarimage?figure='.$figure.'" width="64" class="avatar"  height="110"/>
+        <img   alt="'.$figure.'" src="http://www.habbr.info/habbo-imaging/avatarimage?figure='.$figure.'" width="64" class="avatar"  height="110"/>
     </li>';
    }
 ?>
