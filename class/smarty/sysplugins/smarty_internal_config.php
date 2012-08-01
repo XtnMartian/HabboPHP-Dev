@@ -181,7 +181,7 @@ class Smarty_Internal_Config {
         // compile locking
         if ($this->smarty->compile_locking) {
             if ($saved_timestamp = $this->getCompiledTimestamp()) {
-                touch($this->getCompiledFilepath());
+                @touch($this->getCompiledFilepath());
             }
         }
         // call compiler
