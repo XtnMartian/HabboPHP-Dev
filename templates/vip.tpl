@@ -62,14 +62,14 @@ background:url(images/bulleh.png) no-repeat;
    <div class="rounded" style="background-color: #ffffff;">
     Avantages de base
    </div>
-   <img style="float: left; padding: 10px;" alt="xx" src="http://cdn.1.habbodreams.fr/images/newhc/clothes_b.png" />
+   <img style="float: left; padding: 10px;" alt="xx" src="{$config->url_site}/web-gallery/images/clothes_b.png" />
   </div> 
   
   <div class="cbb hcnone habboclub-infoentry" style="height: 83px;">
    <div class="rounded" style="background-color: #ffffff;">
     Couleurs de base
    </div>
-   <img style="float: left; padding: 10px;" alt="xx" src="http://cdn.1.habbodreams.fr/images/newhc/colors_b.png" />
+   <img style="float: left; padding: 10px;" alt="xx" src="{$config->url_site}/web-gallery/images/colors_b.png" />
 
   </div> 
   
@@ -77,7 +77,7 @@ background:url(images/bulleh.png) no-repeat;
    <div class="rounded" style="background-color: #ffffff;">
     2 couleurs de vêtements à harmoniser
    </div>
-   <img style="float: left; padding: 10px;" alt="xx" src="http://cdn.1.habbodreams.fr/images/newhc/multicolor_b.png" />
+   <img style="float: left; padding: 10px;" alt="xx" src="{$config->url_site}/web-gallery/images/multicolor_b.png" />
   </div> 
   
   <div class="cbb hcnone habboclub-infoentry" style="height: 185px;">   
@@ -88,7 +88,7 @@ background:url(images/bulleh.png) no-repeat;
 
     200 amis dans ta liste
    </div>
-   <img style="float: left; padding: 10px;" alt="xx" src="http://cdn.1.habbodreams.fr/images/newhc/friends_b.png" />
+   <img style="float: left; padding: 10px;" alt="xx" src="{$config->url_site}/web-gallery/images/friends_b.png" />
   </div>
   
   <div class="cbb hcnone habboclub-infoentry" style="height: 136px;">   
@@ -114,7 +114,7 @@ background:url(images/bulleh.png) no-repeat;
    <div class="rounded" style="background-color: #ffffff;">
     Offres Marché
    </div>
-   <img style="float: left; padding: 10px;" alt="xx" src="http://cdn.1.habbodreams.fr/images/newhc/coin_offers.png" />
+   <img style="float: left; padding: 10px;" alt="xx" src="{$config->url_site}/web-gallery/images/coin_offers.png" />
    <div style="position: relative; top: 13px; left: -2px">
     = 5 offres
    </div>
@@ -132,14 +132,14 @@ background:url(images/bulleh.png) no-repeat;
    <div class="rounded" style="background-color: #ffffff;">
     Avantages VIP
    </div>
-   <img style="float: left; padding: 10px;" alt="xx" src="http://cdn.1.habbodreams.fr/images/newhc/clothes_vip.png" />
+   <img style="float: left; padding: 10px;" alt="xx" src="{$config->url_site}/web-gallery/images/clothes_vip.png" />
   </div> 
   
   <div class="cbb hcvip habboclub-infoentry">
    <div class="rounded" style="background-color: #ffffff;">
     Couleurs HC + VIP
    </div>
-   <img style="float: left; padding: 10px;" alt="xx" src="http://cdn.1.habbodreams.fr/images/newhc/colors_vip.png" />
+   <img style="float: left; padding: 10px;" alt="xx" src="{$config->url_site}/web-gallery/images/colors_vip.png" />
 
   </div> 
   
@@ -147,7 +147,7 @@ background:url(images/bulleh.png) no-repeat;
    <div class="rounded" style="background-color: #ffffff;">
     2 couleurs de vêtements à harmoniser
    </div>
-   <img style="float: left; padding: 10px;" alt="xx" src="http://cdn.1.habbodreams.fr/images/newhc/multicolor.png" />
+   <img style="float: left; padding: 10px;" alt="xx" src="{$config->url_site}/web-gallery/images/multicolor.png" />
   </div> 
   
   <div class="cbb hcvip habboclub-infoentry" >
@@ -161,7 +161,7 @@ background:url(images/bulleh.png) no-repeat;
    <div class="rounded" style="background-color: #ffffff;">
     2 cadeaux VIP par mois dans le pack inédit HC + VIP
    </div>
-   <img style="float: left; padding: 10px;" alt="xx" src="http://cdn.1.habbodreams.fr/images/newhc/furni_vip.png" />
+   <img style="float: left; padding: 10px;" alt="xx" src="{$config->url_site}/web-gallery/images/furni_vip.png" />
   </div> 
   
    <div class="cbb hcvip habboclub-infoentry">
@@ -169,14 +169,14 @@ background:url(images/bulleh.png) no-repeat;
     900 amis dans ta liste
    </div>
 
-   <img style="float: left; padding: 10px;" alt="xx" src="http://cdn.1.habbodreams.fr/images/newhc/friends_vip.png" />
+   <img style="float: left; padding: 10px;" alt="xx" src="{$config->url_site}/web-gallery/images/friends_vip.png" />
   </div> 
   
   <div class="cbb hcvip habboclub-infoentry">
    <div class="rounded" style="background-color: #ffffff;">
     Badges HC + VIP
    </div>
-   <img style="float: left; padding: 10px;" alt="xx" src="http://cdn.1.habbodreams.fr/images/newhc/badge_vip.png" />
+   <img style="float: left; padding: 10px;" alt="xx" src="{$config->url_site}/web-gallery/images/badge_vip.png" />
   </div>
   
   <div class="cbb hcvip habboclub-infoentry" >
@@ -218,7 +218,7 @@ background:url(images/bulleh.png) no-repeat;
    <div class="rounded" style="background-color: #ffffff;">
     Offres Marché
    </div>
-   <img style="float: left; padding: 10px;" alt="xx" src="http://cdn.1.habbodreams.fr/images/newhc/coin_offers.png" />
+   <img style="float: left; padding: 10px;" alt="xx" src="{$config->url_site}/web-gallery/images/coin_offers.png" />
    <div style="position: relative; top: 13px; left: -2px">
 
     = 10 offres
