@@ -1,5 +1,5 @@
 <?php
-	class Error extends Smarty
+	class Error
 		{
 		private $error;
 		
