@@ -215,7 +215,23 @@ function generer_token($nom = '')
 //Le nom optionnel si vous en avez défini un lors de la création du token
 function verifier_token($referer = '', $nom = '')
 {
-	return true ;
+	if(isset($_GET['token'])){
+		if(isset($_SESSION[$nom.'_token']) && isset($_SESSION[$nom.'_token_time']) && isset($_GET['token']))
+			if($_SESSION[$nom.'_token'] == $_GET['token'])
+				if($_SESSION[$nom.'_token_time'] >= (time() - $temps))
+					if(strtolower($_SERVER['HTTP_REFERER']) == strtolower($referer))
+						return true;
+		echo 'ERROR TOKEN' ;
+		return false;
+	}
+	if(isset($_POST['token'])){
+		if(isset($_SESSION[$nom.'_token']) && isset($_SESSION[$nom.'_token_time']) && isset($_POST['token']))
+			if($_SESSION[$nom.'_token'] == $_POST['token'])
+				if($_SESSION[$nom.'_token_time'] >= (time() - $temps))
+					if(strtolower($_SERVER['HTTP_REFERER']) == strtolower($referer))
+						return true;
+		return false;
+	}
 } 
 
 
