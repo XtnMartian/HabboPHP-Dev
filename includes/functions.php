@@ -18,28 +18,6 @@ if($type == NULL) $type = 'SQL' ;
    return (false);
 }
 
-/*
-function nl2br2($string)
-{
-	return str_replace(array("\r\n", "\r", "\n"), '<br />', $string);
-}
-
-
-function safe($string)
-{
-	$htmlOK = true ;
-	if (get_magic_quotes_gpc())
-		$string = stripslashes($string);
-	if (!is_numeric($string))
-	{
-		$string = _MYSQL_REAL_ESCAPE_STRING_ ? mysql_real_escape_string($string) : addslashes($string);
-		if (!$htmlOK)
-			$string = strip_tags(nl2br2($string));
-	}
-		
-	return $string;
-}
-*/
 function hashMe($str)
 			{
 				$config_hash = "xCg532%@%gdvf^5DGaa6&*rFTfg^FD4\$OIFThrR_gh(ugf*/";
