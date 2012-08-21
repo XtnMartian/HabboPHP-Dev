@@ -307,20 +307,12 @@ function selectmod($username)
 	);
 
 function TicketRefresh($id)
-			{
-				$base = "HABBOPHP-";
-				
-					for($i = 1; $i <= 3; $i++):
-						{
-							$base = $base . rand(0,99);
-							$base = uniqid($base);
-						}
-					endfor;
-					$base = $base . "-HABBOPHP";
-				
-				$request = mysql_query("UPDATE users SET auth_ticket = '".$base."' WHERE id = '".$id."' LIMIT 1") or die(mysql_error());
-				return $base;
-			}
+{
+	
+	$base = uniqid("HABBOPHP-" . rand(0,99)) . "-HABBOPHP";
+	$request = mysql_query("UPDATE users SET auth_ticket = '".$base."' WHERE id = '".$id."' LIMIT 1");
+	return $base;
+}
 
 
 		function GenerateRandom($type = "sso", $length = 0)
