@@ -23,9 +23,4 @@
 	if(!$Auth->isConnected()) redirection($config->url_site.'/logout.php');
 	if($user->rank<6) redirection($config->url_site.'/logout.php');	
 	
-	$token_expected = array('/admin/ajax/ajaximage.php','/admin/ajax/ajaximagelogo.php','/admin/ajax/ajaximage.php');
-	if(preg_match('#ajax#',$_SERVER['PHP_SELF']) && !in_array($_SERVER['PHP_SELF'],$token_expected))
-		if(!Tools::verifier_token()){ Tools::TokenNotValide(); }
-	
-	
 ?>

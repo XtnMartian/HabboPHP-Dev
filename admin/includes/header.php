@@ -73,11 +73,5 @@ $pagename=$parts[count($parts) - 1];
 
     <div class="container">
     
-    <center><?php  
-	if(substr(sprintf('%o', fileperms('../images')), -4)!='0777'){echo '<font lang="en" class="errorc">"<span class="folderc">/images</span>" must be chmod 777</font><br /><br /><br /><br />';}
-	if(substr(sprintf('%o', fileperms('../images/news')), -4)!='0777'){echo '<font lang="en" class="errorc">"<span class="folderc">/images/news</span>" must be chmod 777</font><br /><br /><br /><br />';}
-	if(substr(sprintf('%o', fileperms('../web-gallery/images')), -4)!='0777'){echo '<font lang="en" class="errorc">"<span class="folderc">/web-gallery/images</span>" must be chmod 777</font><br /><br /><br /><br />';}
-	if(substr(sprintf('%o', fileperms('../templates_c')), -4)!='0777'){echo '<font lang="en" class="errorc">"<span class="folderc">/template_c</span>" must be chmod 777</font><br /><br /><br /><br />';}
-	if(substr(sprintf('%o', fileperms('../help/templates_c')), -4)!='0777'){echo '<font lang="en" class="errorc">"<span class="folderc">/help/templates_c</span>" must be chmod 777</font><br /><br /><br /><br />';}
-	?></center>
+   
     <input type="hidden" name="token" id="token" value="<?php  echo Tools::generate_token() ;?>"/>

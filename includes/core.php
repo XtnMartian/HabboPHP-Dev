@@ -15,38 +15,19 @@ define('PATH',$path);
 |            Security                |
 +===================================+*/
 
-
 $injection = 'INSERT|UNION|SELECT|NULL|COUNT|FROM|LIKE|DROP|TABLE|WHERE|COUNT|COLUMN|TABLES|INFORMATION_SCHEMA|OR' ;
 foreach($_GET as $getSearchs){
 	$getSearch = explode(" ",$getSearchs);
 	foreach($getSearch as $k=>$v){
-		if(in_array(strtoupper($v),explode('|',$injection))){
-			header("Location: /injection.php");
+		if(in_array(strtoupper(trim($v)),explode('|',$injection))){
 			exit;
 		}
 	}
 }
 
-
-
-foreach($_POST as $getSearchs){
-	$getSearch = explode(" ",$getSearchs);
-	foreach($getSearch as $k=>$v){
-		if(in_array(strtoupper($v),explode('|',$injection))){
-			header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
-			header("Last-Modified: ".gmdate("D, d M Y H:i:s")." GMT");
-		
-			header("Cache-Control: no-store, no-cache, must-revalidate");
-			header("Cache-Control: post-check=0, pre-check=0", false);
-			header("Pragma: no-cache");
-			header("Location: ../");
-			exit;
-		}
-	}
-}
-ini_set('display_errors', 1); 
-ini_set('log_errors', 1); 
-error_reporting(E_ALL);
+ini_set('display_errors', 0); 
+ini_set('log_errors', 0); 
+error_reporting(0);
 
 
 /*+===================================+
