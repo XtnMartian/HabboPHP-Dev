@@ -11,5 +11,3 @@ $tpl->assign('page',$query);
 $tpl->display('header.tpl');
 $tpl->display('page.tpl');
 $tpl->display('footer.tpl');
-
-?>
