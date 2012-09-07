@@ -30,6 +30,10 @@
 			}
 			return false;
 		}
+		
+		public function Get(){
+			return $this->error ;
+		}
 			
 		public function ErrorPresent()
 		{

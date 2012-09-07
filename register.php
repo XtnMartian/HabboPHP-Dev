@@ -161,9 +161,6 @@ if($page == 3){
 		$req = $db->query('UPDATE habbophp_stats SET inscrits=inscrits+1 WHERE date="'.safe($d,'SQL').'"');
 			
 			if($req){
-				
-				
-			
 				$username = safe($_SESSION['Register']['pseudo'],'SQL') ;
 				$password = safe($_SESSION['Register']['password'],'SQL') ;
 			

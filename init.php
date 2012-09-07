@@ -17,10 +17,6 @@
  	define('CORE','CORE');
 	require dirname(__FILE__)."/includes/core.php";
 	if(!defined('AUTH'))
-		if(!$Auth->isConnected()) redirection($config->url_site.'/logout.php');
-	
-	if(preg_match('#ajax#',$_SERVER['PHP_SELF']))
-		if(!Tools::verifier_token()){ Tools::TokenNotValide(); }
-	
+		if(!$Auth->isConnected()) redirection($config->url_site.'/logout.php');	
 	
 ?>
