@@ -103,9 +103,7 @@ class Auth{
 			$sql = mysql_query('SELECT id,rank FROM users WHERE username="'.$pseudo.'" AND password = "'.hashMe($password).'" AND rank >= 6');
 		else
 			$sql = mysql_query('SELECT id,rank FROM users WHERE (username="'.$pseudo.'" OR mail="'.$pseudo.'") AND password = "'.hashMe($password).'"');
-		
-		echo mysql_num_rows($sql);
-		
+				
 		if(mysql_num_rows($sql) == 1){
 
 			$data = mysql_fetch_assoc($sql);	
