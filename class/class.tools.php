@@ -45,6 +45,7 @@ class Tools{
 	
 	static function verifier_token()
 	{
+		return true ;
 		if(isset($_GET['token'])){
 			if(isset($_SESSION['token']) && isset($_GET['token']))
 				if($_SESSION['token'] == $_GET['token'])
@@ -60,9 +61,6 @@ class Tools{
 	} 
 	
 	static function TokenNotValide(){
-		//echo $_SERVER['HTTP_REFERER'] ;
-		echo 'ERRORTOKEN' ;
-		exit ;
 	}
 	
 	static function getToken(){

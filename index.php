@@ -18,9 +18,6 @@ $config->checkMaintenance();
 
 $Error = new Error();
 if(isset($_POST['username'])){
-	if(!Tools::verifier_token('index.php')){
-		redirection($config->url_site.'/index.php?error=token');
-	}
 	if(isset($_POST['username']) && empty($_POST['username']))
 		$Error->set('pseudo',$tpl->assign('error_login_pseudo','true'));
 	if(isset($_POST['password']) && empty($_POST['password']))
