@@ -118,9 +118,24 @@ $admin=true;
             
           </div>
           
+          <div class="control-group">
+            <label class="control-label" for="input01">Bots price</label>
+            <div class="controls">
+              <input type="text" value="<?php echo $config->botsprix; ?>" class="bprix" id="bprix">
+            </div>
+            
+          </div>
+          
+          <div class="control-group">
+            <label class="control-label" for="input01">Look bots</label>
+            <div class="controls">
+              <input type="text" value="<?php echo $config->lookbots; ?>" class="lookbots" id="lookbots">
+            </div>
+            
+          </div>
           
           <div class="form-actions">
-            <button type="submit" class="btn btn-primary" onclick="setconfig($('#moneyname').val(),'moneyname');setconfig($('#vip').val(),'vipprice');setconfig($('#wget').val(),'winwin');setconfig($('#wprix').val(),'winwinprix');"><?php echo $lang['Update']; ?></button>
+            <button type="submit" class="btn btn-primary" onclick="setconfig($('#moneyname').val(),'moneyname');setconfig($('#vip').val(),'vipprice');setconfig($('#wget').val(),'winwin');setconfig($('#wprix').val(),'winwinprix');setconfig($('#bprix').val(),'botsprix');setconfig($('#lookbots').val(),'lookbots');"><?php echo $lang['Update']; ?></button>
           </div>
         </fieldset>
       </div>

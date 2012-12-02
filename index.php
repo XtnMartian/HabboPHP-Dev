@@ -10,6 +10,7 @@ session_start();
 define('CORE','CORE');
 require'includes/core.php';
 
+
 if(extension_loaded('curl'))
 	require 'class/facebook.php';
 

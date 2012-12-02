@@ -280,6 +280,11 @@ YouHaveNoRooms = Tu n'as pas de rooms !
 SuccessWinWin = Tu as reçu tes WinWin
 BuyWinWins = WinWin
 
+error_name_bot = Donne un nom à ton bot
+error_motto_bot = Quelle mission pour ton bot ?
+error_sentence_bot = Un bot ça parle :)
+error_roomid_bot = WTF ?
+error_jetons = Tu n'as pas assez de jetons
 
 ######################################################
 # Staff

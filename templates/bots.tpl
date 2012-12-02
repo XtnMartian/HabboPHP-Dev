@@ -1,5 +1,5 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="{$config->url_site}/web-gallery/js/vip.js"></script>
+<script type="text/javascript" src="/web-gallery/js/vip.js"></script>
 <script>
 	jQuery.noConflict();
 </script>
@@ -11,7 +11,7 @@
         <div class="cbb clearfix green">
             <h2 class="title">{#ConfirmBuy#}</h2>
             <div class="box-content">
-            	<span style="font-size:14px;">Je confirme l'achat pour <span id="pricee"></span></span> {$config->moneyname}
+            	<span style="font-size:14px;">{#ConfirmBuyCredits#} <span id="pricee"></span></span> {$config->moneyname}
             	<a href="javascript:void(0);" class="new-button red-button" onclick="{literal}jQuery('#verif').animate({opacity:0}).slideUp();{/literal}"><b>Annuler</b><i></i></a>
             	<a href="javascript:void(0);" id="confirmbb" class="new-button green-button"><b>Je confirme mon achat !</b><i></i></a>
             </div>
@@ -30,26 +30,53 @@
            {if isset($roomsEmpty)}
            	<div style="padding:10px;font-size:18px;background:#c40000;color:white;text-shadow:0 1px 0 #990000;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;margin:10px;" class="not_enought_money">{#YouHaveNoRooms#} </div>
            	{else}
+           	{if isset($display_error)}
+           	 <div style="padding:10px;font-size:18px;background:#c40000;color:white;text-shadow:0 1px 0 #990000;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;margin:10px;" class="not_enought_money">
+           	{if isset($error_name_bot)}{$error_name_bot}<br/>{/if}
+           	{if isset($error_motto_bot)}{$error_motto_bot}<br/>{/if}
+           	{if isset($error_sentence_bot)}{$error_sentence_bot}<br/>{/if}
+           	{if isset($error_roomid_bot)}{$error_roomid_bot}<br/>{/if}
+           	{if isset($error_jetons)}{$error_jetons}{/if}
+        
+           	 </div>
+           	    	{/if}
            	<h3>Achète un bots</h3>
+
+<form action="bots.php" method="post" id="botsShop">
+
 <div style="float:left">
 <p>
 <label class="alignLabel">Nom du bot :</label>
-<input   type="text" name="motto" size="32" maxlength="32" value="{if isset($user->motto)}{$user->motto}{/if}" id="avatar motto" />
+<input   type="text" name="name_bot" size="32" value="{if isset($smarty.post.name_bot)}{$smarty.post.name_bot}{/if}" maxlength="32" id="avatar motto" />
 </p>
 <p>
 <label class="alignLabel">Mission du bot :</label>
-<input   type="text" name="email" size="32" maxlength="32" value="{if isset($user->mail)}{$user->mail}{/if}" id="" />
+<input   type="text" name="motto_bot" value="{if isset($smarty.post.motto_bot)}{$smarty.post.motto_bot}{/if}" size="32" maxlength="32"  id="" />
 </p>
 <p>
 <label class="alignLabel">Phrase du bot :</label>
-<input   type="text" name="email" size="32" maxlength="32" value="{if isset($user->mail)}{$user->mail}{/if}" id="" />
+<input   type="text" name="sentence_bot"  value="{if isset($smarty.post.sentence_bot)}{$smarty.post.sentence_bot}{/if}" size="32" maxlength="32"  id="" />
 </p>
 <p>
 <label class="alignLabel">Appart du bot :</label>
-<select name="roomid">
-	<option value="">OK</option>
+<select name="roomid_bot">
+{foreach from=$rooms item=i}
+	<option value="{$i.id}">{$i.caption}</option>
+{/foreach}
 </select>
 </p>
+
+<input type="hidden" name="save" value="1"/>
+
+<div class="settings-buttons">
+<a href="#" class="new-button" style="display: none" onclick="document.forms['botsShop'].submit();" id="profileForm-submit"><b>Acheter</b><i></i></a>
+<noscript><input type="submit" value="Enregistrer" name="save" class="submit" /></noscript>
+</div>
+</form>
+<script type="text/javascript">
+$("profileForm-submit").show();
+</script>
+
 </div>
 <div style="float:right">
 	 <td class='tablerow2' align='center'><img src="http://www.habbo.fr/habbo-imaging/avatarimage?figure={$user->look}&action=std&gesture=sml&direction=3&head_direction=3&size=b&img_format=gif"></td>
@@ -60,31 +87,3 @@
 </div>
 </div>
 </div>
-{literal}
-<script type="text/javascript">
-function addBadgeVerif(badge,price){
-	jQuery('#verif').slideDown().animate({opacity:1});
-	jQuery('#vbi').html(badge);
-	jQuery('#pricee').html(price);
-	jQuery('#confirmbb').attr('onclick',"addBadge('"+badge+"')");
-}
-function addBadge(badge){
-	var token = jQuery('#token').val();
-	if(badge == ""){return false}
-	jQuery.post('ajax/addBadge.php', { badge:badge,token:token },function(data){
-		if(data == "11"){
-			jQuery('#valideok').slideDown('fast',function(){ jQuery('#valideok').animate({opacity:1}); });
-			setTimeout("jQuery('#valideok').animate({opacity:0}).slideUp('fast');",2000);
-		}
-		if(data == "existe"){
-			jQuery('.error_existe').slideDown('fast',function(){ jQuery('.error_existe').animate({opacity:1}); });
-			setTimeout("jQuery('.error_existe').animate({opacity:0},'fast',function(){jQuery('.error_existe').slideUp('fast');});",2000);
-		}
-		if(data == "nomoney"){
-			jQuery('.not_enought_money').slideDown('fast',function(){ jQuery('.not_enought_money').animate({opacity:1}); });
-			setTimeout("jQuery('.not_enought_money').animate({opacity:0},'fast',function(){jQuery('.not_enought_money').slideUp('fast');});",2000);
-		}
-	});
-}
-</script>
-{/literal}

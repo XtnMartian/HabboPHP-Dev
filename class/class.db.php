@@ -98,17 +98,22 @@ class Db{
             $sql = substr($sql,0,-1);
             $sql .= ")";
         }
-        if(mysql_query($sql))
+        if(mysql_query($sql)){
+        	
+        	if(!isset($data["id"])){
+           		 $this->id=mysql_insert_id();
+	        }
+	        else{
+	            $this->id = $data["id"];
+	        }
+
+        
         	return true ;
+        }
         	 
-        	 mysql_query($sql) or die(mysql_error()); 
+        	 
         	       	
-        if(!isset($data["id"])){
-            $this->id=mysql_insert_id();
-        }
-        else{
-            $this->id = $data["id"];
-        }
+       
     }
     
     /**

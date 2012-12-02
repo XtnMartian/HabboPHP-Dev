@@ -95,6 +95,8 @@ require	$path.'class/class.tools.php' ;
 
 require	$path.'class/class.validate.php' ;
 
+require	$path.'class/rooms.class.php' ;
+
 /*+===================================+
 |   Connexion to database             |
 +===================================+*/

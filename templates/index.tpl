@@ -382,7 +382,7 @@ HabboView.add( function() {
         <i></i>
     </div>
 
-    <a href="{$config->url_site}/register.php" id="frontpage-image" style="background-image: url('//habbo.hs.llnwd.net/c_images/Frontpage_images/landing_val12_b.png')" onclick="startRegistration(this); return false;"></a>
+    <a href="{$config->url_site}/register.php" id="frontpage-image" style="background-image: url('{$config->url_site}/web-gallery/landing_generic_1203xx_1.png')" onclick="startRegistration(this); return false;"></a>
 
 </div>
 
