@@ -7,6 +7,9 @@
     <ul class="nav nav-pills">
       <?php if(Tools::checkACL($user->rank,ACL_USERS_VIEW)) { ?><li><a href="users.php"><?php echo $lang['Users']; ?></a></li><?php } ?>
       <?php if(Tools::checkACL($user->rank,ACL_USERS_BAN)) {  ?><li><a href="ban.php"><?php echo $lang['ManageBan']; ?></a></li><?php } ?>
+       <?php if(Tools::checkACL($user->rank,ACL_USERS_PERMISSIONS)) {  ?><li><a href="permissions.php"><?php echo $lang['ManagePermissions']; ?></a></li><?php } ?>
+
+
     </ul>
   </div>
 </header>

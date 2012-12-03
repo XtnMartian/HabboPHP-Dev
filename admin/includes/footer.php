@@ -95,6 +95,19 @@ function deleteRareManager(id){
 	});
 }
 
+function updatePermissions(id){
+	var c = 0 ;
+	if($('#'+id).is(':checked')){
+		var c = '1';
+	}
+		$.get('ajax/updatepermissions.php?id='+id+'&c='+c+'',function(data){
+			if($('#success-update').is(':hidden')){
+				$('#success-update').fadeIn().delay(1000);
+				$('#success-update').fadeOut();
+			}
+		});
+}
+
 function ChangeUsers(id){
 	var token = $('#token').val();
 	var username = $('#inusername_'+id).val();

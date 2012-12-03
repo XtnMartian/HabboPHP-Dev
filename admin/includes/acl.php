@@ -50,7 +50,7 @@ define('ACL_SITE_FB','6;7;8;6;7;8');
 //Users
 define('ACL_USERS_VIEW','6;7;8');
 define('ACL_USERS_BAN','6;7;8');
-
+define('ACL_USERS_PERMISSIONS','7');
 //Shop
 define('ACL_SHOP_STATS','6;7;8');
 define('ACL_SHOP_VOUCHER','6;7;8');
