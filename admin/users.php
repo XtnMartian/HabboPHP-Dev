@@ -33,5 +33,4 @@
 
 </section>
 <?php } ?>
-
 <?php include "includes/footer.php"; ?>
