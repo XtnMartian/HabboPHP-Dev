@@ -638,9 +638,8 @@ if (typeof HabboView != "undefined") {
 </script>
 
 
-<script type="text/javascript" src="{$config->url_site}/web-gallery/js/jquery.js"></script>
-
-<script type="text/javascript" src="{$config->url_site}/web-gallery/js/ui.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
 
 <link rel="stylesheet" href="{$config->url_site}/web-gallery/styles/home.css" type="text/css" />
 <link rel="stylesheet" href="{$config->url_site}/assets/css/nyroModal.css" type="text/css" media="screen" />
@@ -651,6 +650,7 @@ if (typeof HabboView != "undefined") {
 <!--[if IE 6]>
 	<script type="text/javascript" src="{$config->url_site}/assets/js/jquery.nyroModal-ie6.min.js"></script>
 <![endif]-->
+
 
 
     
